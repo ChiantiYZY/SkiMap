@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Map, { Source, Layer, LayerProps } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import LiftAnimation from './LiftAnimation';
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2hpYW50aXl6eSIsImEiOiJjbTY1dWQ4YTcxenNuMnBvZDV0dzUxeWRrIn0.r_3omZ6pLIuCzapjpvVHdQ'; // You'll need to get this from mapbox.com
 const PALISADES_COORDINATES = {
@@ -94,15 +95,23 @@ export default function TerrainMap() {
     type: 'FeatureCollection',
     features: []
   });
+  const [tramFeature, setTramFeature] = useState<any>(null);
 
   useEffect(() => {
-    // Fetch lifts for Palisades Tahoe
     const fetchLifts = async () => {
       try {
         const response = await fetch('/api/GetLifts?resort=Palisades Tahoe');
         const data = await response.json();
         if (data.features) {
           setLiftsData(data);
+          // Find the aerial tram feature
+          const tram = data.features.find((f: any) => 
+            f.properties.liftType === 'cable_car' && 
+            f.properties.name.toLowerCase().includes('aerial tram')
+          );
+          if (tram) {
+            setTramFeature(tram);
+          }
         }
       } catch (error) {
         console.error('Error fetching lifts:', error);
@@ -119,6 +128,8 @@ export default function TerrainMap() {
       mapStyle="mapbox://styles/mapbox/satellite-v9"
       mapboxAccessToken={MAPBOX_TOKEN}
       terrain={{ source: 'mapbox-dem', exaggeration: 1.5 }}
+      minZoom={13}
+      maxZoom={20}
     >
       <Source
         id="mapbox-dem"
@@ -133,6 +144,9 @@ export default function TerrainMap() {
         <Layer {...liftLayerStyle} />
         <Layer {...liftLabelStyle} />
       </Source>
+
+      {/* Animated dot */}
+      <LiftAnimation lift={tramFeature} />
     </Map>
   );
 } 

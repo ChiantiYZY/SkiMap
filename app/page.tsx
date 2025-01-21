@@ -22,10 +22,6 @@ export default function Home() {
         </Suspense>
       </div>
 
-      <div className="mt-8 flex gap-4">
-        <Button>Toggle Ski Runs</Button>
-        <Button>Fetch Runs</Button>
-      </div>
     </main>
   )
 }
