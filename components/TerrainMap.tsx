@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Map, { Source, Layer, LayerProps } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -30,17 +31,28 @@ const aerialTramData = {
 };
 
 const liftLayerStyle: LayerProps = {
-  id: 'aerial-tram',
+  id: 'lifts',
   type: 'line',
   paint: {
-    'line-color': '#FF0000',
+    'line-color': [
+      'match',
+      ['get', 'liftType'],
+      'cable_car', '#FF0000',    // Red for cable cars
+      'gondola', '#0000FF',      // Blue for gondolas
+      'chair_lift', '#00FF00',   // Green for chair lifts
+      'platter', '#FFA500',      // Orange for platter lifts
+      'j-bar', '#800080',        // Purple for j-bars
+      'magic_carpet', '#FFFF00', // Yellow for magic carpets
+      't-bar', '#FFC0CB',        // Pink for t-bars
+      '#FFFFFF'                  // White for any other types
+    ],
     'line-width': 4,
-    'line-dasharray': [2, 1] // Creates a dashed line effect
+    'line-dasharray': [2, 1]
   }
 };
 
 const liftLabelStyle: LayerProps = {
-  id: 'aerial-tram-label',
+  id: 'lift-labels',
   type: 'symbol',
   layout: {
     'text-field': ['get', 'name'],
@@ -66,7 +78,34 @@ const liftLabelStyle: LayerProps = {
   }
 };
 
+interface LiftFeatureCollection {
+  type: 'FeatureCollection';
+  features: any[];
+}
+
 export default function TerrainMap() {
+  const [liftsData, setLiftsData] = useState<LiftFeatureCollection>({
+    type: 'FeatureCollection',
+    features: []
+  });
+
+  useEffect(() => {
+    // Fetch lifts for Palisades Tahoe
+    const fetchLifts = async () => {
+      try {
+        const response = await fetch('/api/GetLifts?resort=Palisades Tahoe');
+        const data = await response.json();
+        if (data.features) {
+          setLiftsData(data);
+        }
+      } catch (error) {
+        console.error('Error fetching lifts:', error);
+      }
+    };
+
+    fetchLifts();
+  }, []);
+
   return (
     <Map
       initialViewState={PALISADES_COORDINATES}
@@ -83,8 +122,8 @@ export default function TerrainMap() {
         maxzoom={14}
       />
 
-      {/* Aerial Tram lift source and layers */}
-      <Source id="aerial-tram" type="geojson" data={aerialTramData}>
+      {/* All lifts source and layers */}
+      <Source id="lifts" type="geojson" data={liftsData}>
         <Layer {...liftLayerStyle} />
         <Layer {...liftLabelStyle} />
       </Source>
