@@ -3,7 +3,9 @@ import Map, { Source, Layer, LayerProps } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import LiftAnimation from './LiftAnimation';
 
-const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2hpYW50aXl6eSIsImEiOiJjbTY1dWQ4YTcxenNuMnBvZDV0dzUxeWRrIn0.r_3omZ6pLIuCzapjpvVHdQ'; // You'll need to get this from mapbox.com
+// const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2hpYW50aXl6eSIsImEiOiJjbTY1dWQ4YTcxenNuMnBvZDV0dzUxeWRrIn0.r_3omZ6pLIuCzapjpvVHdQ'; // You'll need to get this from mapbox.com
+
+const MAPBOX_TOKEN = 'dont work'; 
 const PALISADES_COORDINATES = {
   latitude: 39.1969,
   longitude: -120.2358,
