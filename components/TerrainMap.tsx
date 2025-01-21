@@ -57,16 +57,21 @@ const liftLabelStyle: LayerProps = {
   layout: {
     'text-field': ['get', 'name'],
     'text-size': 10,
-    'text-offset': [0, 0.5],
+    'text-offset': [0, 1],
     'text-anchor': 'center',
     'symbol-placement': 'line',
     'text-justify': 'center',
-    'text-allow-overlap': true,
+    'text-allow-overlap': false,
+    'text-ignore-placement': false,
     'text-rotation-alignment': 'map',
     'text-letter-spacing': 0.1,
     'text-transform': 'uppercase',
     'symbol-z-order': 'source',
-    'symbol-sort-key': 1
+    'symbol-sort-key': 1,
+    'text-padding': 5,
+    'symbol-spacing': 250,
+    'text-max-angle': 45,
+    'text-optional': true
   },
   paint: {
     'text-color': '#FFFFFF',
@@ -74,7 +79,8 @@ const liftLabelStyle: LayerProps = {
     'text-halo-width': 3,
     'text-halo-blur': 1,
     'text-translate': [0, 0],
-    'text-translate-anchor': 'viewport'
+    'text-translate-anchor': 'viewport',
+    'text-opacity': 0.9
   }
 };
 
