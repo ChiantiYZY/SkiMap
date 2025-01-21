@@ -1,8 +1,10 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import { Search } from "lucide-react"
+import ResortList from "@/components/ResortList"
+import { ResortName } from '@/app/json/resortCoordinates'
 
 const TerrainMap = dynamic(() => import("@/components/TerrainMap"), {
   ssr: false,
@@ -10,31 +12,21 @@ const TerrainMap = dynamic(() => import("@/components/TerrainMap"), {
 })
 
 export default function Home() {
+  const [selectedResort, setSelectedResort] = useState<ResortName>('Palisades Tahoe');
+
   return (
     <main className="flex flex-col h-screen">
-      <div className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm">
-        {/* Search Box */}
-        <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-md border border-gray-200/20">
-          <Search className="w-5 h-5 text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search lifts..."
-            className="bg-transparent outline-none text-white placeholder-gray-400"
-          />
-          <button className="p-1 hover:bg-white/10 rounded">
-            <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
 
+      <ResortList 
+        onResortChange={setSelectedResort}
+        selectedResort={selectedResort}
+      />
       <div className="flex-1 relative">
+        <div className="absolute top-4 right-4 bg-black/30 text-white px-4 py-2 rounded-lg backdrop-blur-sm z-10">
+          {selectedResort}
+        </div>
         <Suspense fallback={<div>Loading...</div>}>
-          <TerrainMap />
+          <TerrainMap resortName={selectedResort} />
         </Suspense>
       </div>
     </main>

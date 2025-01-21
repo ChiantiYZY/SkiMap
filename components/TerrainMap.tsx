@@ -1,16 +1,10 @@
-import { useEffect, useState } from 'react';
-import Map, { Source, Layer, LayerProps } from 'react-map-gl';
+import { useEffect, useState, useRef } from 'react';
+import Map, { Source, Layer, LayerProps, ViewState, MapRef } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import LiftAnimation from './LiftAnimation';
 import { MAPBOX_TOKEN } from '../config/mapbox-config';
-
-const PALISADES_COORDINATES = {
-  latitude: 39.1969,
-  longitude: -120.2358,
-  zoom: 13,
-  pitch: 60,
-  bearing: 0
-};
+import { RESORT_COORDINATES, ResortName } from '@/app/json/resortCoordinates';
+import LayerToggle from './LayerToggle';
 
 // Aerial Tram lift data
 const aerialTramData = {
@@ -90,17 +84,25 @@ interface LiftFeatureCollection {
   features: any[];
 }
 
-export default function TerrainMap() {
+interface TerrainMapProps {
+  resortName: ResortName;
+}
+
+export default function TerrainMap({ resortName }: TerrainMapProps) {
+  const mapRef = useRef<MapRef>(null);
+  const [viewState, setViewState] = useState<Partial<ViewState>>(RESORT_COORDINATES[resortName]);
   const [liftsData, setLiftsData] = useState<LiftFeatureCollection>({
     type: 'FeatureCollection',
     features: []
   });
   const [tramFeature, setTramFeature] = useState<any>(null);
+  const [isMapLoaded, setIsMapLoaded] = useState(false);
+  const [showLifts, setShowLifts] = useState(true);
 
   useEffect(() => {
     const fetchLifts = async () => {
       try {
-        const response = await fetch('/api/GetLifts?resort=Palisades Tahoe');
+        const response = await fetch(`/api/GetLifts?resort=${encodeURIComponent(resortName)}`);
         const data = await response.json();
         if (data.features) {
           setLiftsData(data);
@@ -119,34 +121,114 @@ export default function TerrainMap() {
     };
 
     fetchLifts();
-  }, []);
+  }, [resortName]);
+
+  // Update effect with smooth transition
+  useEffect(() => {
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+
+    const targetCoords = RESORT_COORDINATES[resortName];
+    const currentCenter = map.getCenter();
+    
+    // Calculate distance between current and target coordinates (in kilometers)
+    const distance = calculateDistance(
+      currentCenter.lat,
+      currentCenter.lng,
+      targetCoords.latitude,
+      targetCoords.longitude
+    );
+
+    map.jumpTo({
+      center: [targetCoords.longitude, targetCoords.latitude],
+      zoom: targetCoords.zoom,
+      pitch: targetCoords.pitch,
+      bearing: targetCoords.bearing
+    });
+
+    // // If distance is more than 50km, jump to location instead of flying
+    // if (distance > 50) {
+    //   map.jumpTo({
+    //     center: [targetCoords.longitude, targetCoords.latitude],
+    //     zoom: targetCoords.zoom,
+    //     pitch: targetCoords.pitch,
+    //     bearing: targetCoords.bearing
+    //   });
+    // } else {
+    //   map.flyTo({
+    //     center: [targetCoords.longitude, targetCoords.latitude],
+    //     zoom: targetCoords.zoom,
+    //     pitch: targetCoords.pitch,
+    //     bearing: targetCoords.bearing,
+    //     duration: 2000,
+    //     essential: true
+    //   });
+    // }
+
+  }, [resortName]);
 
   return (
-    <Map
-      initialViewState={PALISADES_COORDINATES}
-      style={{ width: '100%', height: '100%' }}
-      mapStyle="mapbox://styles/mapbox/satellite-v9"
-      mapboxAccessToken={MAPBOX_TOKEN}
-      terrain={{ source: 'mapbox-dem', exaggeration: 1.5 }}
-      minZoom={13}
-      maxZoom={20}
-    >
-      <Source
-        id="mapbox-dem"
-        type="raster-dem"
-        url="mapbox://mapbox.mapbox-terrain-dem-v1"
-        tileSize={512}
-        maxzoom={14}
-      />
+    <div className="relative w-full h-full">
+      <Map
+        ref={mapRef}
+        {...viewState}
+        onMove={evt => setViewState(evt.viewState)}
+        style={{ width: '100%', height: '100%' }}
+        mapStyle="mapbox://styles/mapbox/satellite-v9"
+        mapboxAccessToken={MAPBOX_TOKEN}
+        terrain={{ source: 'mapbox-dem', exaggeration: 1.5 }}
+        minZoom={13}
+        maxZoom={20}
+        onLoad={() => setIsMapLoaded(true)}
+      >
+        <Source
+          id="mapbox-dem"
+          type="raster-dem"
+          url="mapbox://mapbox.mapbox-terrain-dem-v1"
+          tileSize={512}
+          maxzoom={14}
+        />
 
-      {/* All lifts source and layers */}
-      <Source id="lifts" type="geojson" data={liftsData}>
-        <Layer {...liftLayerStyle} />
-        <Layer {...liftLabelStyle} />
-      </Source>
+        {/* Only render lift layers if showLifts is true */}
+        {showLifts && (
+          <Source id="lifts" type="geojson" data={liftsData}>
+            <Layer {...liftLayerStyle} />
+            <Layer {...liftLabelStyle} />
+          </Source>
+        )}
 
-      {/* Animated dot */}
-      <LiftAnimation lift={tramFeature} />
-    </Map>
+        {/* Animated dot */}
+        <LiftAnimation lift={tramFeature} />
+      </Map>
+
+      {/* Add layer controls */}
+      <div className="absolute top-4 right-4 bg-black/30 p-4 rounded-lg backdrop-blur-sm z-10 space-y-2">
+        <div className="text-white mb-2">{resortName}</div>
+        <LayerToggle 
+          label="Show Lifts"
+          checked={showLifts}
+          onChange={setShowLifts}
+        />
+      </div>
+
+      {/* Loading overlay */}
+      {!isMapLoaded && (
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+        </div>
+      )}
+    </div>
   );
+}
+
+function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371; // Earth's radius in kilometers
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c;
 } 
