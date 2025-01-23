@@ -1,8 +1,9 @@
 import { useState } from 'react';
+import { ResortName } from '@/app/json/resortCoordinates';
 
 interface ResortListProps {
-  onResortChange: (resort: string) => void;
-  selectedResort: string;
+  onResortChange: (resort: ResortName) => void;
+  selectedResort: ResortName;
 }
 
 interface Resort {
@@ -60,7 +61,7 @@ export default function ResortList({ onResortChange, selectedResort }: ResortLis
             {filteredResorts.map((resort) => (
               <button
                 key={resort.name}
-                onClick={() => onResortChange(resort.name)}
+                onClick={() => onResortChange(resort.name as ResortName)}
                 className={`w-full text-left p-4 hover:bg-gray-100 transition-colors
                   ${selectedResort === resort.name ? 'bg-blue-50' : ''}
                   border-b last:border-b-0`}

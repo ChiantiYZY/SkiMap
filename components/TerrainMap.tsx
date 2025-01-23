@@ -98,6 +98,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
   const [tramFeature, setTramFeature] = useState<any>(null);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [showLifts, setShowLifts] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -123,48 +124,19 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     fetchLifts();
   }, [resortName]);
 
-  // Update effect with smooth transition
+  // Update view when resort changes
   useEffect(() => {
+    setIsTransitioning(true);
     const map = mapRef.current?.getMap();
-    if (!map) return;
-
-    const targetCoords = RESORT_COORDINATES[resortName];
-    const currentCenter = map.getCenter();
     
-    // Calculate distance between current and target coordinates (in kilometers)
-    const distance = calculateDistance(
-      currentCenter.lat,
-      currentCenter.lng,
-      targetCoords.latitude,
-      targetCoords.longitude
-    );
+    if (map) {
+      map.jumpTo(RESORT_COORDINATES[resortName]);
+      setViewState(RESORT_COORDINATES[resortName]);
+    }
 
-    map.jumpTo({
-      center: [targetCoords.longitude, targetCoords.latitude],
-      zoom: targetCoords.zoom,
-      pitch: targetCoords.pitch,
-      bearing: targetCoords.bearing
-    });
-
-    // // If distance is more than 50km, jump to location instead of flying
-    // if (distance > 50) {
-    //   map.jumpTo({
-    //     center: [targetCoords.longitude, targetCoords.latitude],
-    //     zoom: targetCoords.zoom,
-    //     pitch: targetCoords.pitch,
-    //     bearing: targetCoords.bearing
-    //   });
-    // } else {
-    //   map.flyTo({
-    //     center: [targetCoords.longitude, targetCoords.latitude],
-    //     zoom: targetCoords.zoom,
-    //     pitch: targetCoords.pitch,
-    //     bearing: targetCoords.bearing,
-    //     duration: 2000,
-    //     essential: true
-    //   });
-    // }
-
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 1000);
   }, [resortName]);
 
   return (
@@ -212,7 +184,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       </div>
 
       {/* Loading overlay */}
-      {!isMapLoaded && (
+      {(!isMapLoaded || isTransitioning) && (
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
         </div>
