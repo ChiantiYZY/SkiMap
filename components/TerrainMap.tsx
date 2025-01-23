@@ -79,6 +79,15 @@ const liftLabelStyle: LayerProps = {
   }
 };
 
+const runLayerStyle: LayerProps = {
+  id: 'runs',
+  type: 'line',
+  paint: {
+    'line-color': '#000000',
+    'line-width': 2
+  }
+};
+
 interface LiftFeatureCollection {
   type: 'FeatureCollection';
   features: any[];
@@ -99,6 +108,10 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const [showLifts, setShowLifts] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [runsData, setRunsData] = useState<LiftFeatureCollection>({
+    type: 'FeatureCollection',
+    features: []
+  });
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -122,6 +135,24 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     };
 
     fetchLifts();
+  }, [resortName]);
+
+  useEffect(() => {
+    const fetchRuns = async () => {
+      try {
+        const response = await fetch(`/api/GetRuns?resort=${encodeURIComponent(resortName)}`);
+        const data = await response.json();
+
+        console.log(data);
+        if (data.features) {
+          setRunsData(data);
+        }
+      } catch (error) {
+        console.error('Error fetching runs:', error);
+      }
+    };
+
+    fetchRuns();
   }, [resortName]);
 
   // Update view when resort changes
@@ -160,6 +191,10 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           tileSize={512}
           maxzoom={14}
         />
+
+        <Source id="runs" type="geojson" data={runsData}>
+          <Layer {...runLayerStyle} />
+        </Source>
 
         {/* Only render lift layers if showLifts is true */}
         {showLifts && (
