@@ -28,3 +28,9 @@ next-env.d.ts
 
 # mapbox config
 config/mapbox-config.ts
+
+# Uploaded files
+public/uploads/*
+public/uploads/thumbnails/*
+!public/uploads/.gitkeep
+!public/uploads/thumbnails/.gitkeep

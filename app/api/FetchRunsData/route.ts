@@ -34,9 +34,7 @@ const sampleRunsData = [
   }
 ];
 
-export async function GET() {
-  console.log("Request received");
-  
+export async function GET() {  
   try {
     // Simulate some random selection of data
     const randomizedData = [...sampleRunsData]
@@ -51,7 +49,6 @@ export async function GET() {
         { status: 200 }
       );
 
-    console.log("Output: ", output);
     return output;
   } catch (error) {
     return NextResponse.json(

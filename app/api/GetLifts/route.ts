@@ -5,7 +5,6 @@ import path from 'path';
 // Helper function to read the GeoJSON file
 async function readLiftsData() {
   const filePath = path.join(process.cwd(), 'JSON', 'lifts.geojson');
-  console.log("---------------filePath", filePath);
   const fileContent = await fs.readFile(filePath, 'utf-8');
   return JSON.parse(fileContent);
 }
@@ -34,12 +33,9 @@ export async function GET(request: NextRequest) {
         area.properties?.name?.toLowerCase().includes(resortName.toLowerCase())
       );
 
-      console.log(data);
       return data;
 
     });
-
-    console.log("---------------filteredLifts", filteredLifts);
 
     // Return filtered lifts as a GeoJSON FeatureCollection
     return NextResponse.json({

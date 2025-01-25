@@ -1,10 +1,13 @@
 import { useEffect, useState, useRef } from 'react';
-import Map, { Source, Layer, LayerProps, ViewState, MapRef } from 'react-map-gl';
+import Map, { Source, Layer, LayerProps, ViewState, MapRef, Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import LiftAnimation from './LiftAnimation';
 import { MAPBOX_TOKEN } from '../config/mapbox-config';
 import { RESORT_COORDINATES, ResortName } from '@/app/json/resortCoordinates';
 import LayerToggle from './LayerToggle';
+import Image from 'next/image';
+import PhotoUpload from './PhotoUpload';
+import ImagePreview from './ImagePreview';
 
 // Aerial Tram lift data
 const aerialTramData = {
@@ -97,6 +100,15 @@ interface TerrainMapProps {
   resortName: ResortName;
 }
 
+interface PhotoLocation {
+  latitude: number;
+  longitude: number;
+  timestamp?: string;
+  thumbnail: string;
+  url: string;
+  file: File;
+}
+
 export default function TerrainMap({ resortName }: TerrainMapProps) {
   const mapRef = useRef<MapRef>(null);
   const [viewState, setViewState] = useState<Partial<ViewState>>(RESORT_COORDINATES[resortName]);
@@ -112,6 +124,9 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     type: 'FeatureCollection',
     features: []
   });
+  const [photos, setPhotos] = useState<PhotoLocation[]>([]);
+  const [selectedPhoto, setSelectedPhoto] = useState<PhotoLocation | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -143,7 +158,6 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         const response = await fetch(`/api/GetRuns?resort=${encodeURIComponent(resortName)}`);
         const data = await response.json();
 
-        console.log(data);
         if (data.features) {
           setRunsData(data);
         }
@@ -169,6 +183,16 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       setIsTransitioning(false);
     }, 1000);
   }, [resortName]);
+
+  // Clean up object URLs when photos change
+  useEffect(() => {
+    return () => {
+      // Clean up object URLs when component unmounts
+      photos.forEach(photo => {
+        URL.revokeObjectURL(photo.thumbnail);
+      });
+    };
+  }, [photos]);
 
   return (
     <div className="relative w-full h-full">
@@ -206,6 +230,57 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
 
         {/* Animated dot */}
         <LiftAnimation lift={tramFeature} />
+
+        {photos.map((photo, index) => (
+          <Marker
+            key={index}
+            latitude={photo.latitude}
+            longitude={photo.longitude}
+            anchor="bottom"
+            onClick={e => {
+              e.originalEvent.stopPropagation();
+              setSelectedPhoto(photo);
+            }}
+          >
+            <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-lg">
+              <Image
+                src={photo.thumbnail}
+                alt="Photo location"
+                width={32}
+                height={32}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Marker>
+        ))}
+
+        {selectedPhoto && (
+          <Popup
+            latitude={selectedPhoto.latitude}
+            longitude={selectedPhoto.longitude}
+            anchor="bottom"
+            onClose={() => setSelectedPhoto(null)}
+            closeButton={true}
+          >
+            <div className="p-2">
+              <div 
+                className="cursor-pointer"
+                onClick={() => setPreviewImage(selectedPhoto.url)}
+              >
+                <Image
+                  src={selectedPhoto.thumbnail}
+                  alt="Selected photo"
+                  width={200}
+                  height={150}
+                  className="rounded-lg hover:opacity-90 transition-opacity"
+                />
+              </div>
+              <p className="text-sm mt-2 text-gray-600">
+                {new Date(selectedPhoto.timestamp).toLocaleString()}
+              </p>
+            </div>
+          </Popup>
+        )}
       </Map>
 
       {/* Add layer controls */}
@@ -224,6 +299,15 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
         </div>
       )}
+
+      {previewImage && (
+        <ImagePreview 
+          imageUrl={previewImage}
+          onClose={() => setPreviewImage(null)}
+        />
+      )}
+
+      <PhotoUpload onPhotoAdd={(photo) => setPhotos(prev => [...prev, photo])} />
     </div>
   );
 }

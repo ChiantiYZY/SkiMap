@@ -4,15 +4,11 @@ import path from 'path';
 
 // Helper function to read the GeoJSON file
 async function readRunsData() {
-  console.log("---------------readRunsData");
   try {
     const filePath = path.join(process.cwd(), 'JSON', 'test_run.json');
-    console.log("---------------filePath", filePath);
     const fileContent = await fs.readFile(filePath, 'utf-8');
-    console.log("---------------fileContent", fileContent);
 
     const data = JSON.parse(fileContent);
-    console.log("---------------parsed data", data);
     return data;
   } catch (error) {
     console.error('Error reading runs.geojson:', error);
@@ -26,10 +22,8 @@ async function readRunsData() {
 
 export async function GET(request: NextRequest) {
   try {
-    console.log("---------------try get runs");
     const searchParams = request.nextUrl.searchParams;
     const resortName = searchParams.get('resort');
-    console.log("---------------resortName", resortName);
 
     if (!resortName) {
       return NextResponse.json(
@@ -53,7 +47,6 @@ export async function GET(request: NextRequest) {
       const data = skiAreas.some((area: any) => 
         area.properties?.name?.toLowerCase().includes(resortName.toLowerCase())
       );
-      console.log(data);
       return data;
     });
 

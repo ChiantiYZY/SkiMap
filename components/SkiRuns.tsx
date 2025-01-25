@@ -46,7 +46,6 @@ export const fetchRunsData = async () => {
   try {
     const response = await fetch('/api/FetchRunsData');
     const data = await response.json();
-    console.log("Request sent, data: ", data);
     return data.success ? data.data : [];
   } catch (error) {
     console.error('Error fetching runs data:', error);
