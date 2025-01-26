@@ -1,0 +1,6389 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "60cf809167f95f3d439a019584b955d5e1588254",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Slalom Glade",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2275.7,
+            2267.11,
+            2260.84,
+            2255.04,
+            2247.04,
+            2229.4700000000003,
+            2217.29,
+            2204.66,
+            2195.25,
+            2184.25,
+            2174.8500000000004,
+            2165.24,
+            2152.75,
+            2143.75,
+            2133.57,
+            2125.74,
+            2116.88,
+            2107.54,
+            2100.27,
+            2094.27,
+            2092.44,
+            2089.04,
+            2085.98,
+            2082.3,
+            2078.3,
+            2074.7599999999998,
+            2072.96,
+            2072.64,
+            2072.64
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501226"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9217648,
+            39.2478404,
+            2275.7
+          ],
+          [
+            -119.9218281,
+            39.24830320000002,
+            2260.84
+          ],
+          [
+            -119.9218431,
+            39.248412500000015,
+            2257.84
+          ],
+          [
+            -119.9220612,
+            39.2490476,
+            2224.29
+          ],
+          [
+            -119.9222908,
+            39.2496506,
+            2193.25
+          ],
+          [
+            -119.92258829999997,
+            39.24997190000001,
+            2174.8500000000004
+          ],
+          [
+            -119.92301660000003,
+            39.2507341,
+            2134.57
+          ],
+          [
+            -119.9234912,
+            39.2510793,
+            2116.88
+          ],
+          [
+            -119.92358340000003,
+            39.2511463,
+            2111.54
+          ],
+          [
+            -119.92370129999998,
+            39.2513064,
+            2105.54
+          ],
+          [
+            -119.92389370000002,
+            39.2515088,
+            2096.27
+          ],
+          [
+            -119.92416330000003,
+            39.251849099999994,
+            2092.44
+          ],
+          [
+            -119.92426010000003,
+            39.2521215,
+            2088.04
+          ],
+          [
+            -119.9241951,
+            39.25233020000002,
+            2082.98
+          ],
+          [
+            -119.92406350000003,
+            39.25270000000001,
+            2078.3
+          ],
+          [
+            -119.92377609999997,
+            39.2529863,
+            2073.7599999999998
+          ],
+          [
+            -119.92414000000002,
+            39.2532212,
+            2072.64
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "d955267fa58ddecd0fbcd28ebd680261622addd7",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Dusty's",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2229.44,
+            2222.88,
+            2212.88,
+            2200.88,
+            2192.29,
+            2185.61,
+            2179.98,
+            2174.98
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501227"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91829630000002,
+            39.25043080000001,
+            2229.44
+          ],
+          [
+            -119.91841690000003,
+            39.2506167,
+            2222.88
+          ],
+          [
+            -119.9184058,
+            39.25085830000001,
+            2212.88
+          ],
+          [
+            -119.91819290000002,
+            39.25135580000001,
+            2190.29
+          ],
+          [
+            -119.91807829999998,
+            39.2519171,
+            2174.98
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "910bbe276d8672250ede94340ff73b8ebfa24947",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Upper Show Off",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2271.11,
+            2263.84,
+            2257.04,
+            2245.19,
+            2233.03,
+            2220.03,
+            2208.8100000000004,
+            2201.58,
+            2194.19,
+            2186.1,
+            2179.1,
+            2173.09,
+            2173.09
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501228"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92126930000003,
+            39.24818310000001,
+            2271.11
+          ],
+          [
+            -119.9213022,
+            39.248714800000016,
+            2253.04
+          ],
+          [
+            -119.92152030000003,
+            39.24911680000002,
+            2230.03
+          ],
+          [
+            -119.92186840000002,
+            39.2494685,
+            2206.8100000000004
+          ],
+          [
+            -119.9218765,
+            39.2499676,
+            2190.19
+          ],
+          [
+            -119.9218111,
+            39.25023200000001,
+            2181.1
+          ],
+          [
+            -119.92170709999998,
+            39.2505432,
+            2173.09
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "be3f82013c0f07d40c468f536df11486c97e262d",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Wiggle",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2234.54,
+            2230.54,
+            2223.61,
+            2215.88,
+            2206.4,
+            2198.96,
+            2190.96,
+            2177.73,
+            2169.2599999999998,
+            2165.2,
+            2159.24,
+            2150.6,
+            2145.8300000000004,
+            2140.8300000000004,
+            2140.8300000000004
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501229"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91868260000003,
+            39.2498779,
+            2234.54
+          ],
+          [
+            -119.9194701,
+            39.25027520000001,
+            2211.88
+          ],
+          [
+            -119.9200359,
+            39.2505043,
+            2194.96
+          ],
+          [
+            -119.9204615,
+            39.25085,
+            2173.73
+          ],
+          [
+            -119.9205889,
+            39.25119510000001,
+            2164.24
+          ],
+          [
+            -119.92073289999996,
+            39.2513765,
+            2159.24
+          ],
+          [
+            -119.9208002,
+            39.2515036,
+            2154.6
+          ],
+          [
+            -119.92124390000004,
+            39.2519078,
+            2140.8300000000004
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "eb23f456c0212bfaf8983b8e37f21096d3028662",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Battleborn",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2435.15,
+            2431.08,
+            2422.08,
+            2413.29,
+            2404.29,
+            2394.7599999999998,
+            2379.77,
+            2367.77,
+            2355.8,
+            2342.8,
+            2329.09,
+            2316.94,
+            2307.94,
+            2299.3500000000004,
+            2288.27,
+            2279.3500000000004,
+            2270.4900000000002,
+            2260.4900000000002,
+            2247.75,
+            2234.75,
+            2223.75,
+            2213.42,
+            2213.42
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501230"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.90946950000003,
+            39.25431860000001,
+            2435.15
+          ],
+          [
+            -119.9103871,
+            39.2545463,
+            2410.29
+          ],
+          [
+            -119.91152400000006,
+            39.25468699999999,
+            2363.77
+          ],
+          [
+            -119.91287879999997,
+            39.255097,
+            2304.94
+          ],
+          [
+            -119.9134343,
+            39.255145200000015,
+            2288.27
+          ],
+          [
+            -119.91415580000003,
+            39.2549643,
+            2260.4900000000002
+          ],
+          [
+            -119.91519940000003,
+            39.2544737,
+            2213.42
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "bba039fbc95435d2588ef920418c0ef51b7f900d",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Crystal Ridge",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2595.58,
+            2597.21,
+            2595.21,
+            2591.4300000000003,
+            2587.4300000000003,
+            2584.57,
+            2581.57,
+            2577.57,
+            2573.52,
+            2568.9,
+            2562.9,
+            2557.22,
+            2551.22,
+            2544.75,
+            2536.62,
+            2529.62,
+            2523.66,
+            2515.51,
+            2508.51,
+            2503.4700000000003,
+            2499.2799999999997,
+            2496.09,
+            2494.09,
+            2491.61,
+            2488.61,
+            2483.92,
+            2476.92,
+            2470.92,
+            2465.05,
+            2458.66,
+            2452.66,
+            2445.72,
+            2437.72,
+            2433.15,
+            2426.05,
+            2417.9900000000002,
+            2408.22,
+            2397.77,
+            2389.77,
+            2379.73,
+            2372.15,
+            2361.15,
+            2352.15,
+            2343.56,
+            2332.29,
+            2324.29,
+            2317.56,
+            2314.56
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501231"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.90170300000003,
+            39.2581676,
+            2595.58
+          ],
+          [
+            -119.9017084,
+            39.258013100000014,
+            2597.21
+          ],
+          [
+            -119.9019573,
+            39.2578126,
+            2595.21
+          ],
+          [
+            -119.902552,
+            39.257554,
+            2586.4300000000003
+          ],
+          [
+            -119.90339990000003,
+            39.2573096,
+            2575.57
+          ],
+          [
+            -119.90358560000003,
+            39.257264099999986,
+            2572.52
+          ],
+          [
+            -119.9038807,
+            39.257167499999994,
+            2566.9
+          ],
+          [
+            -119.9043029,
+            39.2569316,
+            2557.22
+          ],
+          [
+            -119.9049085,
+            39.2564228,
+            2536.62
+          ],
+          [
+            -119.90533409999998,
+            39.256170200000014,
+            2523.66
+          ],
+          [
+            -119.9055215,
+            39.256059,
+            2518.51
+          ],
+          [
+            -119.90615190000003,
+            39.2558419,
+            2503.4700000000003
+          ],
+          [
+            -119.9065823,
+            39.255627,
+            2497.09
+          ],
+          [
+            -119.90715040000003,
+            39.255218700000015,
+            2490.61
+          ],
+          [
+            -119.90756560000005,
+            39.255102100000016,
+            2483.92
+          ],
+          [
+            -119.90806400000002,
+            39.2550177,
+            2470.92
+          ],
+          [
+            -119.9083962,
+            39.254864899999994,
+            2464.05
+          ],
+          [
+            -119.9091748,
+            39.25446699999999,
+            2443.72
+          ],
+          [
+            -119.90946950000003,
+            39.25431860000001,
+            2435.15
+          ],
+          [
+            -119.91022860000004,
+            39.2539364,
+            2411.9900000000002
+          ],
+          [
+            -119.9107685,
+            39.2534862,
+            2385.73
+          ],
+          [
+            -119.91163540000004,
+            39.2532852,
+            2358.15
+          ],
+          [
+            -119.91227390000003,
+            39.2531887,
+            2334.56
+          ],
+          [
+            -119.91264760000003,
+            39.25307220000001,
+            2324.29
+          ],
+          [
+            -119.91290500000002,
+            39.25276260000001,
+            2314.56
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "fe99327bd13b3cb0d48c00a4bbf70e7069f86b51",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Diamondback",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2464.05,
+            2460.05,
+            2451.72,
+            2443.72,
+            2434.3500000000004,
+            2422.9300000000003,
+            2410.9300000000003,
+            2400.4500000000003,
+            2386.3100000000004,
+            2372.3100000000004,
+            2360.69,
+            2347.69,
+            2337.73,
+            2328.25,
+            2319.25,
+            2306.59,
+            2297.59,
+            2284.59,
+            2272.63,
+            2261.63,
+            2248.16,
+            2238.16,
+            2227.16,
+            2214.27,
+            2204.27,
+            2195.05,
+            2187.05,
+            2184.05
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501232"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9083962,
+            39.254864899999994,
+            2464.05
+          ],
+          [
+            -119.9098473,
+            39.2552256,
+            2422.9300000000003
+          ],
+          [
+            -119.91043390000003,
+            39.25537840000001,
+            2397.4500000000003
+          ],
+          [
+            -119.91105160000004,
+            39.255768300000014,
+            2357.69
+          ],
+          [
+            -119.91140460000005,
+            39.2559491,
+            2340.73
+          ],
+          [
+            -119.91209500000002,
+            39.256118000000015,
+            2315.25
+          ],
+          [
+            -119.91312800000003,
+            39.25618230000001,
+            2277.15
+          ],
+          [
+            -119.91394300000003,
+            39.2562185,
+            2244.16
+          ],
+          [
+            -119.91492930000005,
+            39.25631890000002,
+            2204.27
+          ],
+          [
+            -119.91572190000002,
+            39.25642739999999,
+            2184.05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "7b7e5a217fe9828bf5395d3bc183fd24e9905143",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Penguin",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2228.62,
+            2226.25,
+            2212.8100000000004,
+            2204.8100000000004,
+            2197.23,
+            2188.98,
+            2181.98,
+            2174.98,
+            2166.3300000000004,
+            2159.57,
+            2154.3,
+            2150.3,
+            2145.3,
+            2138.04,
+            2133.04,
+            2128.08,
+            2123.08,
+            2117.42,
+            2112.71,
+            2107.71,
+            2105.61,
+            2105.63
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501233"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91740300000004,
+            39.250443,
+            2228.62
+          ],
+          [
+            -119.9174323,
+            39.250624599999995,
+            2226.25
+          ],
+          [
+            -119.91745020000003,
+            39.25073530000002,
+            2219.25
+          ],
+          [
+            -119.91748650000002,
+            39.2510569,
+            2207.8100000000004
+          ],
+          [
+            -119.91807829999998,
+            39.2519171,
+            2174.98
+          ],
+          [
+            -119.9184521,
+            39.252311100000014,
+            2157.57
+          ],
+          [
+            -119.9188518,
+            39.25245980000001,
+            2151.3
+          ],
+          [
+            -119.91952660000005,
+            39.2524196,
+            2138.04
+          ],
+          [
+            -119.91998860000002,
+            39.2524638,
+            2128.08
+          ],
+          [
+            -119.9202333,
+            39.2526852,
+            2123.08
+          ],
+          [
+            -119.92041950000002,
+            39.2528537,
+            2117.42
+          ],
+          [
+            -119.9207257,
+            39.2531994,
+            2107.71
+          ],
+          [
+            -119.9207309,
+            39.2534406,
+            2105.61
+          ],
+          [
+            -119.92063,
+            39.25364,
+            2105.63
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "a6722e3a08216bcc893bbdddd3fe4f1c0aa6a9b0",
+        "uses": [
+          "downhill"
+        ],
+        "name": "G. S.",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2276.7,
+            2274.84,
+            2272.84,
+            2263.92,
+            2257.19,
+            2247.19,
+            2240.2799999999997,
+            2232.8700000000003,
+            2221.63,
+            2212.38,
+            2200.44,
+            2185.44,
+            2172.9900000000002,
+            2162.11,
+            2150.11,
+            2141.9900000000002,
+            2130.9900000000002,
+            2124.3100000000004,
+            2115.72,
+            2103.24,
+            2092.24,
+            2076.4100000000003,
+            2067.8500000000004,
+            2060.19,
+            2057.21
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501234"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92184900000002,
+            39.2477843,
+            2276.7
+          ],
+          [
+            -119.9219218,
+            39.2476164,
+            2275.7799999999997
+          ],
+          [
+            -119.9222485,
+            39.24759080000001,
+            2272.84
+          ],
+          [
+            -119.92269999999999,
+            39.24775570000001,
+            2259.19
+          ],
+          [
+            -119.9233257,
+            39.2480047,
+            2237.8700000000003
+          ],
+          [
+            -119.9235905,
+            39.2482861,
+            2225.63
+          ],
+          [
+            -119.92386560000003,
+            39.248471,
+            2213.63
+          ],
+          [
+            -119.92412000000003,
+            39.248575500000015,
+            2200.44
+          ],
+          [
+            -119.92464420000003,
+            39.248676,
+            2176.44
+          ],
+          [
+            -119.9250336,
+            39.24874840000001,
+            2162.11
+          ],
+          [
+            -119.9254437,
+            39.24899360000001,
+            2143.4900000000002
+          ],
+          [
+            -119.9257344,
+            39.249258900000015,
+            2127.9900000000002
+          ],
+          [
+            -119.92573949999998,
+            39.24959250000001,
+            2117.72
+          ],
+          [
+            -119.92578109999997,
+            39.250356300000014,
+            2072.8500000000004
+          ],
+          [
+            -119.9258524,
+            39.2509482,
+            2057.21
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "133dd93e424b35a89e468a46516bef49d3f9bc3d",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Lakeview",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2314.56,
+            2309.4100000000003,
+            2305.4100000000003,
+            2300.4900000000002,
+            2299.4900000000002,
+            2296.4900000000002,
+            2295.4300000000003,
+            2292.4300000000003,
+            2287.62,
+            2282.65,
+            2276.7599999999998,
+            2273.4300000000003,
+            2269.4300000000003,
+            2263.02,
+            2256.38,
+            2249.38,
+            2243.86,
+            2234.64,
+            2228.3900000000003,
+            2225.3900000000003,
+            2228.62,
+            2228.62
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501235"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91290500000002,
+            39.25276260000001,
+            2314.56
+          ],
+          [
+            -119.9131481,
+            39.2528441,
+            2309.4100000000003
+          ],
+          [
+            -119.91368200000002,
+            39.252727,
+            2302.3100000000004
+          ],
+          [
+            -119.91417490000003,
+            39.25270560000001,
+            2297.4900000000002
+          ],
+          [
+            -119.91459800000003,
+            39.2526554,
+            2295.4300000000003
+          ],
+          [
+            -119.9150113,
+            39.252531300000015,
+            2288.4300000000003
+          ],
+          [
+            -119.91542510000002,
+            39.252267499999995,
+            2282.65
+          ],
+          [
+            -119.9154757,
+            39.251697199999995,
+            2269.4300000000003
+          ],
+          [
+            -119.91556800000002,
+            39.251563499999996,
+            2266.02
+          ],
+          [
+            -119.91610050000003,
+            39.2512338,
+            2251.38
+          ],
+          [
+            -119.91740300000004,
+            39.250443,
+            2228.62
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "430a77e90794c410c0e3d539170e41652f31354c",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Lightning",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2523.66,
+            2519.17,
+            2510.17,
+            2498.17,
+            2483.2,
+            2472.2,
+            2460.8900000000003,
+            2447.8900000000003,
+            2439.67,
+            2428.67,
+            2418.67,
+            2409.8900000000003,
+            2400.8900000000003,
+            2393.63,
+            2383.63,
+            2372.06,
+            2360.14,
+            2343.14,
+            2333.8300000000004,
+            2322.8300000000004,
+            2312.8300000000004,
+            2303.44,
+            2295.44,
+            2287.01,
+            2287.01
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501236"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.90533409999998,
+            39.256170200000014,
+            2523.66
+          ],
+          [
+            -119.9060884,
+            39.2564105,
+            2498.17
+          ],
+          [
+            -119.90734370000003,
+            39.2565696,
+            2447.8900000000003
+          ],
+          [
+            -119.90887799999997,
+            39.2565639,
+            2398.8900000000003
+          ],
+          [
+            -119.91026710000003,
+            39.2569644,
+            2340.14
+          ],
+          [
+            -119.91089520000003,
+            39.2571413,
+            2312.8300000000004
+          ],
+          [
+            -119.91132080000003,
+            39.2573664,
+            2297.44
+          ],
+          [
+            -119.91141960000006,
+            39.2577534,
+            2287.01
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "a7fdc226dd5dfdb8cc30609d2d09a1fe2a57641c",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Lodgepole",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2159.4700000000003,
+            2153.73,
+            2151.46,
+            2150.46,
+            2148.46,
+            2145.36,
+            2142.71,
+            2138.71,
+            2135.1,
+            2131.2799999999997,
+            2126.32,
+            2121.32,
+            2116.7799999999997,
+            2111.24,
+            2106.9,
+            2104.9,
+            2102.63,
+            2100.63,
+            2098.63,
+            2094.59,
+            2091.59,
+            2087.75,
+            2083.75,
+            2081.74,
+            2078.74,
+            2075.74,
+            2074.4,
+            2074.4,
+            2072.64,
+            2072.64,
+            2071.63,
+            2070.63,
+            2070.13,
+            2069.9900000000002,
+            2069.9900000000002
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501237"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91706800000003,
+            39.2557454,
+            2159.4700000000003
+          ],
+          [
+            -119.91715660000006,
+            39.255647,
+            2154.73
+          ],
+          [
+            -119.91758610000002,
+            39.25520930000001,
+            2150.46
+          ],
+          [
+            -119.91766000000005,
+            39.25511820000002,
+            2150.46
+          ],
+          [
+            -119.91822110000003,
+            39.2547772,
+            2142.71
+          ],
+          [
+            -119.9194771,
+            39.2543937,
+            2123.32
+          ],
+          [
+            -119.92022000000003,
+            39.2540626,
+            2110.24
+          ],
+          [
+            -119.92063,
+            39.25364,
+            2105.63
+          ],
+          [
+            -119.9214517,
+            39.253646,
+            2095.59
+          ],
+          [
+            -119.9220937,
+            39.2536172,
+            2087.75
+          ],
+          [
+            -119.9226333,
+            39.2534637,
+            2082.15
+          ],
+          [
+            -119.92339,
+            39.2534031,
+            2075.4
+          ],
+          [
+            -119.92414000000002,
+            39.2532212,
+            2072.64
+          ],
+          [
+            -119.92502,
+            39.2523825,
+            2069.9900000000002
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "d6aafaaff658b06f498d0a8ed624beee76ad5c5e",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Lower Show Off",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2173.09,
+            2168.42,
+            2162.88,
+            2158.59,
+            2153.65,
+            2151.65,
+            2142.61,
+            2132.9500000000003,
+            2123.7599999999998,
+            2117.16,
+            2106.16,
+            2096.3,
+            2088.52,
+            2081.52,
+            2077.74,
+            2075.4
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501238"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92170709999998,
+            39.2505432,
+            2173.09
+          ],
+          [
+            -119.92194,
+            39.251280099999995,
+            2156.59
+          ],
+          [
+            -119.9220542,
+            39.252064,
+            2132.9500000000003
+          ],
+          [
+            -119.9222307,
+            39.2526026,
+            2110.16
+          ],
+          [
+            -119.92277049999997,
+            39.25314930000001,
+            2084.52
+          ],
+          [
+            -119.92339,
+            39.2534031,
+            2075.4
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "9f8d6e246ec4686be0e266c7ceb3ee9f5602edc9",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Luggi's",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2288.4300000000003,
+            2280.62,
+            2272.58,
+            2261.58,
+            2251.2,
+            2240.8500000000004,
+            2230.8500000000004,
+            2218.62,
+            2208.06,
+            2198.34,
+            2187.17,
+            2179.17,
+            2171.54,
+            2167.56,
+            2168.56
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501239"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9150113,
+            39.252531300000015,
+            2288.4300000000003
+          ],
+          [
+            -119.91536660000003,
+            39.2526948,
+            2276.62
+          ],
+          [
+            -119.91573,
+            39.25292390000001,
+            2261.58
+          ],
+          [
+            -119.91604660000003,
+            39.2532455,
+            2243.2
+          ],
+          [
+            -119.9163841,
+            39.25379210000001,
+            2211.06
+          ],
+          [
+            -119.91659690000003,
+            39.2544433,
+            2184.17
+          ],
+          [
+            -119.91671090000003,
+            39.25511980000002,
+            2168.56
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "d8e8aa7369d3b37699c6a530fd535a49a28a2843",
+        "uses": [
+          "downhill"
+        ],
+        "name": "O. God",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2208.18,
+            2199.18,
+            2185.67,
+            2173.7799999999997,
+            2160.7799999999997,
+            2147.2799999999997,
+            2140.2799999999997,
+            2122.52,
+            2107.4900000000002,
+            2095.29,
+            2087.46,
+            2076.46,
+            2067.19,
+            2062.19,
+            2057.21
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501240"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9228269,
+            39.249025900000014,
+            2208.18
+          ],
+          [
+            -119.9232508,
+            39.249190700000014,
+            2191.18
+          ],
+          [
+            -119.92375960000003,
+            39.2493485,
+            2165.7799999999997
+          ],
+          [
+            -119.9241853,
+            39.24980280000001,
+            2133.52
+          ],
+          [
+            -119.9250522,
+            39.250313300000016,
+            2089.29
+          ],
+          [
+            -119.9258524,
+            39.2509482,
+            2057.21
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "ae1157e9bb5922fbdf2edf6ad309c4962d89dbd8",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Popular",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2238.13,
+            2231.3300000000004,
+            2223.46,
+            2215.84,
+            2207.84,
+            2201.2599999999998,
+            2190.3300000000004,
+            2184.3300000000004,
+            2175.53,
+            2169.18,
+            2164.18,
+            2159.21,
+            2154.24,
+            2149.6,
+            2143.8300000000004,
+            2139.6,
+            2133.6,
+            2124.52,
+            2118.64,
+            2110.67,
+            2105.71,
+            2103.61,
+            2102.61,
+            2102.63,
+            2105.63
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501241"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91910260000003,
+            39.2494224,
+            2238.13
+          ],
+          [
+            -119.9201189,
+            39.2497446,
+            2210.84
+          ],
+          [
+            -119.9208457,
+            39.250239,
+            2182.3300000000004
+          ],
+          [
+            -119.92114160000003,
+            39.2508902,
+            2163.21
+          ],
+          [
+            -119.92124020000003,
+            39.2516701,
+            2144.8300000000004
+          ],
+          [
+            -119.92124390000004,
+            39.2519078,
+            2140.8300000000004
+          ],
+          [
+            -119.92126100000003,
+            39.25299260000001,
+            2109.67
+          ],
+          [
+            -119.9210845,
+            39.253330200000015,
+            2102.61
+          ],
+          [
+            -119.92063,
+            39.25364,
+            2105.63
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "20dd4ab17206e915027cc3ddf73c02e458dbe4d2",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Powder",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2297.4900000000002,
+            2287.82,
+            2275.86,
+            2267.86,
+            2255.7599999999998,
+            2244.4,
+            2236.8900000000003,
+            2225.15,
+            2214.92,
+            2208.42,
+            2198.42,
+            2192.9
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501243"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91417490000003,
+            39.25270560000001,
+            2297.4900000000002
+          ],
+          [
+            -119.91469210000002,
+            39.253269499999995,
+            2267.86
+          ],
+          [
+            -119.91548490000002,
+            39.2540596,
+            2218.92
+          ],
+          [
+            -119.9158405,
+            39.25474,
+            2192.9
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "1857faffda4093708d592b78f3dd109615f7395b",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Ridge Run",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2276.7,
+            2273.7,
+            2272.11,
+            2270.65,
+            2267.65,
+            2264.06,
+            2257.21,
+            2252.21,
+            2249.21,
+            2245.22,
+            2243.17,
+            2240.17,
+            2238.13,
+            2237.3900000000003,
+            2239.3900000000003,
+            2234.54,
+            2231.61,
+            2230.52,
+            2229.44,
+            2229.44,
+            2229.62,
+            2228.62,
+            2228.62
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501244"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92184900000002,
+            39.2477843,
+            2276.7
+          ],
+          [
+            -119.9217648,
+            39.2478404,
+            2275.7
+          ],
+          [
+            -119.9216721,
+            39.24790210000001,
+            2273.7
+          ],
+          [
+            -119.9213612,
+            39.248109100000015,
+            2272.11
+          ],
+          [
+            -119.92126930000003,
+            39.24818310000001,
+            2271.11
+          ],
+          [
+            -119.92097179999998,
+            39.24842270000001,
+            2266.65
+          ],
+          [
+            -119.92065520000003,
+            39.24854730000001,
+            2261.06
+          ],
+          [
+            -119.92004779999998,
+            39.24863970000001,
+            2250.21
+          ],
+          [
+            -119.9195801,
+            39.24899410000001,
+            2244.22
+          ],
+          [
+            -119.91910260000003,
+            39.2494224,
+            2238.13
+          ],
+          [
+            -119.9189358,
+            39.249551900000014,
+            2238.3900000000003
+          ],
+          [
+            -119.918742,
+            39.2496255,
+            2239.3900000000003
+          ],
+          [
+            -119.91868260000003,
+            39.2498779,
+            2234.54
+          ],
+          [
+            -119.9185372,
+            39.2502598,
+            2230.61
+          ],
+          [
+            -119.91829630000002,
+            39.25043080000001,
+            2229.44
+          ],
+          [
+            -119.91788150000002,
+            39.25053590000002,
+            2227.44
+          ],
+          [
+            -119.91740300000004,
+            39.250443,
+            2228.62
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "e0d5008a1fec3e9db59eb8b3e916f5d167e53445",
+        "uses": [
+          "downhill"
+        ],
+        "name": "School Yard",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2069.9900000000002,
+            2069.36,
+            2067.36,
+            2064.8700000000003,
+            2062.48,
+            2061.46,
+            2058.46,
+            2057.21,
+            2055.19,
+            2053.07,
+            2051.07
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501245"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92502,
+            39.2523825,
+            2069.9900000000002
+          ],
+          [
+            -119.925133,
+            39.2518151,
+            2066.8700000000003
+          ],
+          [
+            -119.92521460000003,
+            39.2517003,
+            2064.8700000000003
+          ],
+          [
+            -119.9252521,
+            39.2516469,
+            2064.48
+          ],
+          [
+            -119.92549269999998,
+            39.2513035,
+            2060.46
+          ],
+          [
+            -119.9258524,
+            39.2509482,
+            2057.21
+          ],
+          [
+            -119.926557,
+            39.250636,
+            2051.07
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "36bb11cb5ab78d14a4316599d3cbabe216079347",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Solitude Canyon",
+        "ref": null,
+        "description": null,
+        "difficulty": "expert",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": true,
+        "patrolled": null,
+        "grooming": "backcountry",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2588.5,
+            2588.22,
+            2586.14,
+            2583.14,
+            2576.62,
+            2573.77,
+            2573.3700000000003,
+            2562.63,
+            2553.63,
+            2542.14,
+            2535.4,
+            2528.4,
+            2516.58,
+            2508.58,
+            2498.58,
+            2492.34,
+            2484.34,
+            2480.9,
+            2475.9,
+            2468.9,
+            2462.2599999999998,
+            2457.2599999999998,
+            2450.61,
+            2444.61,
+            2436.61,
+            2430.67,
+            2418.67,
+            2415.03,
+            2411.4,
+            2404.4,
+            2396.98,
+            2386.98,
+            2372.77,
+            2362.77,
+            2350.77,
+            2337.96,
+            2329.96,
+            2320.53,
+            2311.53,
+            2303.86,
+            2296.86,
+            2286.6,
+            2280.4100000000003,
+            2274.5,
+            2271.5,
+            2263.8900000000003,
+            2259.61,
+            2254.61,
+            2250.13,
+            2245.59,
+            2244.59
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501246"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9018575,
+            39.25843670000001,
+            2588.5
+          ],
+          [
+            -119.9020477,
+            39.25915070000001,
+            2578.62
+          ],
+          [
+            -119.9022826,
+            39.25973610000001,
+            2573.3700000000003
+          ],
+          [
+            -119.9025469,
+            39.260151100000016,
+            2553.63
+          ],
+          [
+            -119.9029433,
+            39.26051490000002,
+            2534.4
+          ],
+          [
+            -119.9034792,
+            39.26073090000002,
+            2516.58
+          ],
+          [
+            -119.90402250000002,
+            39.260850200000014,
+            2496.58
+          ],
+          [
+            -119.90473460000003,
+            39.2608445,
+            2482.34
+          ],
+          [
+            -119.90600460000003,
+            39.26063420000001,
+            2455.2599999999998
+          ],
+          [
+            -119.90701030000002,
+            39.260395500000016,
+            2432.67
+          ],
+          [
+            -119.9081188,
+            39.2600886,
+            2405.4
+          ],
+          [
+            -119.90924940000004,
+            39.259793,
+            2362.77
+          ],
+          [
+            -119.90987340000002,
+            39.2597646,
+            2337.96
+          ],
+          [
+            -119.91067360000004,
+            39.259758900000016,
+            2313.53
+          ],
+          [
+            -119.91123150000003,
+            39.25952580000001,
+            2296.86
+          ],
+          [
+            -119.91205370000003,
+            39.2589574,
+            2269.5
+          ],
+          [
+            -119.9124795,
+            39.2584231,
+            2256.61
+          ],
+          [
+            -119.91318150000002,
+            39.258066,
+            2244.59
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "b878c2c1127e660f6289bc4cba158922f753638e",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Spillway",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2287.01,
+            2277.7,
+            2270.7,
+            2261.7,
+            2253.13,
+            2248.13,
+            2244.59,
+            2240.74,
+            2235.74,
+            2230.8,
+            2225.2,
+            2221.01,
+            2217.54,
+            2211.54,
+            2205.72,
+            2199.72,
+            2195.17,
+            2190.18,
+            2184.05,
+            2179.84,
+            2175.65,
+            2170.65,
+            2163.4700000000003,
+            2160.4700000000003,
+            2159.4700000000003
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501247"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91141960000006,
+            39.2577534,
+            2287.01
+          ],
+          [
+            -119.9117573,
+            39.257847199999986,
+            2275.7
+          ],
+          [
+            -119.91253920000003,
+            39.25806030000001,
+            2253.13
+          ],
+          [
+            -119.91318150000002,
+            39.258066,
+            2244.59
+          ],
+          [
+            -119.91440340000005,
+            39.2575931,
+            2221.01
+          ],
+          [
+            -119.9151561,
+            39.257159,
+            2203.72
+          ],
+          [
+            -119.91550390000003,
+            39.2568294,
+            2195.17
+          ],
+          [
+            -119.91572190000002,
+            39.25642739999999,
+            2184.05
+          ],
+          [
+            -119.91635000000002,
+            39.25600590000001,
+            2170.65
+          ],
+          [
+            -119.91672900000003,
+            39.2558873,
+            2162.4700000000003
+          ],
+          [
+            -119.91706800000003,
+            39.2557454,
+            2159.4700000000003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "cf608a33d12bd300f3f764646a8f3f735f9e3950",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Sunnyside",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2314.56,
+            2309.4100000000003,
+            2298,
+            2288.86,
+            2280.86,
+            2272.13,
+            2263.13,
+            2252.08,
+            2245.21,
+            2239.21,
+            2226.67,
+            2213.42,
+            2205.42,
+            2196.3100000000004,
+            2187.9,
+            2177.7799999999997,
+            2170.56,
+            2168.56,
+            2165.4900000000002,
+            2163.11
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501248"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91290500000002,
+            39.25276260000001,
+            2314.56
+          ],
+          [
+            -119.91378320000003,
+            39.2535481,
+            2275.13
+          ],
+          [
+            -119.91455150000003,
+            39.2541832,
+            2243.21
+          ],
+          [
+            -119.91519940000003,
+            39.2544737,
+            2213.42
+          ],
+          [
+            -119.9154391,
+            39.2545812,
+            2205.42
+          ],
+          [
+            -119.9158405,
+            39.25474,
+            2192.9
+          ],
+          [
+            -119.91639430000002,
+            39.254959,
+            2172.7799999999997
+          ],
+          [
+            -119.91671090000003,
+            39.25511980000002,
+            2168.56
+          ],
+          [
+            -119.91672950000003,
+            39.255378600000014,
+            2165.4900000000002
+          ],
+          [
+            -119.91672600000003,
+            39.255473,
+            2163.11
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "8e49b44918bdc95a69a578c11fc8550281cdda95",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Sunnyside, Freeway",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2163.11,
+            2161.4700000000003
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501248"
+          },
+          {
+            "type": "openstreetmap",
+            "id": "way/1350604652"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91672600000003,
+            39.255473,
+            2163.11
+          ],
+          [
+            -119.916718,
+            39.255691,
+            2161.4700000000003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "bba83a1e2a7eea419d0960222f9155be52e4a43f",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Sunnyside",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2161.4700000000003,
+            2162.4700000000003
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501248"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.916718,
+            39.255691,
+            2161.4700000000003
+          ],
+          [
+            -119.91672900000003,
+            39.2558873,
+            2162.4700000000003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "503950b68171333915386ec77b358c747f1cedff",
+        "uses": [
+          "downhill"
+        ],
+        "name": "The Great Flume",
+        "ref": null,
+        "description": null,
+        "difficulty": "intermediate",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(208, 100%, 33%)",
+        "colorName": "blue",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2595.58,
+            2589.5,
+            2584.5,
+            2572.94,
+            2566.32,
+            2556.29,
+            2544.13,
+            2537.13,
+            2530.53,
+            2518.53,
+            2510.04,
+            2501.04,
+            2490.82,
+            2481.82,
+            2469.82,
+            2463.38,
+            2456.53,
+            2443.75,
+            2436.75,
+            2428.75,
+            2419.32,
+            2411.54,
+            2405.2,
+            2398.2,
+            2389.04,
+            2382.1,
+            2375.44,
+            2365.74,
+            2358.74,
+            2351.74,
+            2343.64,
+            2331.64,
+            2322.38,
+            2312.38,
+            2303.38,
+            2296.01,
+            2287.01
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501249"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.90170300000003,
+            39.2581676,
+            2595.58
+          ],
+          [
+            -119.9017438,
+            39.25836560000001,
+            2589.5
+          ],
+          [
+            -119.9018575,
+            39.25843670000001,
+            2588.5
+          ],
+          [
+            -119.90196400000004,
+            39.2584424,
+            2584.5
+          ],
+          [
+            -119.90229430000002,
+            39.25853050000001,
+            2575.94
+          ],
+          [
+            -119.90265040000003,
+            39.258718000000016,
+            2559.32
+          ],
+          [
+            -119.90303209999998,
+            39.2588403,
+            2548.29
+          ],
+          [
+            -119.9034359,
+            39.258863,
+            2535.53
+          ],
+          [
+            -119.9043719,
+            39.2588545,
+            2504.04
+          ],
+          [
+            -119.9055171,
+            39.2588573,
+            2467.38
+          ],
+          [
+            -119.9067183,
+            39.25875580000002,
+            2430.75
+          ],
+          [
+            -119.90780840000002,
+            39.258345900000016,
+            2398.2
+          ],
+          [
+            -119.9086027,
+            39.25801230000002,
+            2375.44
+          ],
+          [
+            -119.90896900000003,
+            39.2579025,
+            2366.74
+          ],
+          [
+            -119.9093739,
+            39.2579949,
+            2354.74
+          ],
+          [
+            -119.90978390000002,
+            39.2579185,
+            2340.64
+          ],
+          [
+            -119.9104484,
+            39.2578502,
+            2320.38
+          ],
+          [
+            -119.91141960000006,
+            39.2577534,
+            2287.01
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "e3b7e19cc0d24a3ea5c722a423262eae3d5bd77c",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Thunder",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": null,
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2557.22,
+            2553.22,
+            2544.06,
+            2534.06,
+            2523.06,
+            2507.55,
+            2497.55,
+            2481.54,
+            2471.54,
+            2462.38,
+            2450.38,
+            2440.38,
+            2431.8300000000004,
+            2419.8300000000004,
+            2411.8900000000003,
+            2405.8900000000003,
+            2398.8900000000003
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501250"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9043029,
+            39.2569316,
+            2557.22
+          ],
+          [
+            -119.9055712,
+            39.2569657,
+            2515.55
+          ],
+          [
+            -119.90670279999998,
+            39.2569376,
+            2468.54
+          ],
+          [
+            -119.90743470000002,
+            39.2568572,
+            2443.38
+          ],
+          [
+            -119.90887799999997,
+            39.2565639,
+            2398.8900000000003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "6e5dc8965af9c3733454e4ffdbb984a23606930a",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Chute",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2250.21,
+            2247.05,
+            2235.8900000000003,
+            2224.8900000000003,
+            2216.06,
+            2203.98,
+            2195.2599999999998,
+            2188.2599999999998,
+            2182.3300000000004
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/331501251"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.92004779999998,
+            39.24863970000001,
+            2250.21
+          ],
+          [
+            -119.9207253,
+            39.2494511,
+            2213.06
+          ],
+          [
+            -119.9208175,
+            39.2498998,
+            2194.2599999999998
+          ],
+          [
+            -119.9208457,
+            39.250239,
+            2182.3300000000004
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "b951a919f844a8c6c2de8eef27cc791326fb1da8",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Freeway",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2228.62,
+            2226.25,
+            2224.3900000000003,
+            2218.64,
+            2217.9500000000003,
+            2214.63,
+            2208.01,
+            2207.01,
+            2202.59,
+            2201.82,
+            2196.9700000000003,
+            2193.16,
+            2195.16,
+            2189.72,
+            2191.53,
+            2187.53,
+            2183.9100000000003,
+            2184.08,
+            2181.8300000000004,
+            2179.4,
+            2179.15,
+            2178.17,
+            2173.54,
+            2171.54,
+            2169.56,
+            2168.4900000000002,
+            2165.4900000000002,
+            2163.11
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/1350604652"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.91740300000004,
+            39.250443,
+            2228.62
+          ],
+          [
+            -119.91702700000003,
+            39.250813,
+            2223.3900000000003
+          ],
+          [
+            -119.91712500000006,
+            39.251243,
+            2217.9500000000003
+          ],
+          [
+            -119.91709600000003,
+            39.25164099999999,
+            2209.63
+          ],
+          [
+            -119.91710200000003,
+            39.251827999999996,
+            2207.01
+          ],
+          [
+            -119.91729940000006,
+            39.2522286,
+            2202.82
+          ],
+          [
+            -119.91735760000003,
+            39.2525835,
+            2196.9700000000003
+          ],
+          [
+            -119.91745500000003,
+            39.25290000000001,
+            2195.16
+          ],
+          [
+            -119.91780670000003,
+            39.25314580000001,
+            2191.72
+          ],
+          [
+            -119.91813950000002,
+            39.25342739999999,
+            2187.53
+          ],
+          [
+            -119.9180767,
+            39.2536581,
+            2183.9100000000003
+          ],
+          [
+            -119.91786210000002,
+            39.2538921,
+            2182.08
+          ],
+          [
+            -119.91748190000003,
+            39.254283,
+            2179.4
+          ],
+          [
+            -119.91716690000005,
+            39.2544822,
+            2177.15
+          ],
+          [
+            -119.91677729999998,
+            39.254624299999996,
+            2173.54
+          ],
+          [
+            -119.91662600000004,
+            39.254768,
+            2172.54
+          ],
+          [
+            -119.91654370000003,
+            39.2549397,
+            2171.56
+          ],
+          [
+            -119.916582,
+            39.25501300000001,
+            2169.56
+          ],
+          [
+            -119.91667380000003,
+            39.25511130000002,
+            2168.56
+          ],
+          [
+            -119.9167852,
+            39.25530790000001,
+            2166.4900000000002
+          ],
+          [
+            -119.91672600000003,
+            39.255473,
+            2163.11
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "db1e68d1ad043c57dc53d0c807fe09bcc1ec8826",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Freeway",
+        "ref": null,
+        "description": null,
+        "difficulty": "easy",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(125, 100%, 33%)",
+        "colorName": "green",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2161.4700000000003,
+            2159.4700000000003,
+            2159.4700000000003
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/1350604652"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.916718,
+            39.255691,
+            2161.4700000000003
+          ],
+          [
+            -119.91684300000003,
+            39.255782,
+            2160.4700000000003
+          ],
+          [
+            -119.91706800000003,
+            39.2557454,
+            2159.4700000000003
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "d8dcaab8fbb49a4618f11dea63ad574a18b6f4b1",
+        "uses": [
+          "downhill"
+        ],
+        "name": "Corkshrew",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2260.84,
+            2254.02,
+            2251.02,
+            2242.8,
+            2230.4700000000003,
+            2216.34,
+            2205.18,
+            2194.17,
+            2183.72,
+            2173.72,
+            2164.79,
+            2153.9,
+            2146.55,
+            2137.55,
+            2125.24,
+            2117.88,
+            2116.88
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/1350835463"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9218281,
+            39.24830320000002,
+            2260.84
+          ],
+          [
+            -119.9220574,
+            39.24845490000001,
+            2254.02
+          ],
+          [
+            -119.9224814,
+            39.24845190000001,
+            2248.02
+          ],
+          [
+            -119.9225047,
+            39.24873310000002,
+            2234.8
+          ],
+          [
+            -119.9225897,
+            39.2488917,
+            2222.4700000000003
+          ],
+          [
+            -119.9228269,
+            39.249025900000014,
+            2208.18
+          ],
+          [
+            -119.9229069,
+            39.2496473,
+            2180.72
+          ],
+          [
+            -119.92319640000002,
+            39.2498594,
+            2165.79
+          ],
+          [
+            -119.92339340000002,
+            39.2502862,
+            2148.9
+          ],
+          [
+            -119.92342550000002,
+            39.2505575,
+            2137.55
+          ],
+          [
+            -119.9234912,
+            39.2510793,
+            2116.88
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "run",
+        "id": "d4781ea3d7bd9faa9bdcf8d35e4cf8c1b9ea4b6d",
+        "uses": [
+          "downhill"
+        ],
+        "name": "F.I.S.",
+        "ref": null,
+        "description": null,
+        "difficulty": "advanced",
+        "convention": "north_america",
+        "status": "operating",
+        "oneway": true,
+        "lit": null,
+        "gladed": null,
+        "patrolled": null,
+        "grooming": "classic",
+        "color": "hsl(0, 0%, 0%)",
+        "colorName": "black",
+        "skiAreas": [
+          {
+            "properties": {
+              "activities": [
+                "downhill"
+              ],
+              "generated": false,
+              "id": "3457f201618d26c97cf0ab0fdbd2a291d4a916c6",
+              "location": {
+                "iso3166_1Alpha2": "US",
+                "iso3166_2": "US-NV",
+                "localized": {
+                  "en": {
+                    "country": "United States",
+                    "region": "Nevada",
+                    "locality": "Incline Village"
+                  }
+                }
+              },
+              "name": "Diamond Peak",
+              "runConvention": "north_america",
+              "sources": [
+                {
+                  "type": "openstreetmap",
+                  "id": "relation/4651545"
+                },
+                {
+                  "type": "skimap.org",
+                  "id": 359
+                }
+              ],
+              "status": "operating",
+              "type": "skiArea",
+              "websites": [
+                "http://www.diamondpeak.com/"
+              ],
+              "statistics": {
+                "runs": {
+                  "byActivity": {
+                    "downhill": {
+                      "byDifficulty": {
+                        "advanced": {
+                          "count": 13,
+                          "lengthInKm": 5.431325090481398,
+                          "minElevation": 2057.21,
+                          "maxElevation": 2557.22,
+                          "combinedElevationChange": 2056.949999999999
+                        },
+                        "intermediate": {
+                          "count": 11,
+                          "lengthInKm": 5.631948078129001,
+                          "minElevation": 2075.4,
+                          "maxElevation": 2597.21,
+                          "combinedElevationChange": 1456.869999999999
+                        },
+                        "easy": {
+                          "count": 6,
+                          "lengthInKm": 2.323748299156505,
+                          "minElevation": 2051.07,
+                          "maxElevation": 2276.7,
+                          "combinedElevationChange": 225.62999999999965
+                        }
+                      }
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2597.21
+                },
+                "lifts": {
+                  "byType": {
+                    "chair_lift": {
+                      "count": 6,
+                      "lengthInKm": 3.8299193349600857,
+                      "minElevation": 2051.07,
+                      "maxElevation": 2595.58,
+                      "combinedElevationChange": 971.8700000000003
+                    }
+                  },
+                  "minElevation": 2051.07,
+                  "maxElevation": 2595.58
+                },
+                "maxElevation": 2595.58,
+                "minElevation": 2051.07
+              }
+            },
+            "type": "Feature",
+            "geometry": {
+              "coordinates": [
+                -119.9160528338461,
+                39.25359379046155
+              ],
+              "type": "Point"
+            }
+          }
+        ],
+        "elevationProfile": {
+          "heights": [
+            2116.88,
+            2107.54,
+            2097.54,
+            2090.72,
+            2081.72,
+            2072.48,
+            2064.48,
+            2064.48
+          ],
+          "resolution": 25
+        },
+        "sources": [
+          {
+            "type": "openstreetmap",
+            "id": "way/1350837706"
+          }
+        ],
+        "location": null,
+        "websites": []
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.9234912,
+            39.2510793,
+            2116.88
+          ],
+          [
+            -119.9241681,
+            39.251455,
+            2093.72
+          ],
+          [
+            -119.9245727,
+            39.2515235,
+            2079.72
+          ],
+          [
+            -119.92496620000003,
+            39.2515863,
+            2065.48
+          ],
+          [
+            -119.9252521,
+            39.2516469,
+            2064.48
+          ]
+        ]
+      }
+    }
+  ]
+}

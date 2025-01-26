@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic"
 import { Suspense, useState } from "react"
-import { Search } from "lucide-react"
 import ResortList from "@/components/ResortList"
 import { ResortName } from '@/app/json/resortCoordinates'
 
@@ -12,7 +11,7 @@ const TerrainMap = dynamic(() => import("@/components/TerrainMap"), {
 })
 
 export default function Home() {
-  const [selectedResort, setSelectedResort] = useState<ResortName>('Palisades Tahoe');
+  const [selectedResort, setSelectedResort] = useState<ResortName>('Palisades Tahoe Olympic Valley');
 
   return (
     <main className="flex flex-col h-screen">

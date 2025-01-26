@@ -20,47 +20,49 @@ async function readRunsData() {
   }
 }
 
+async function fileExists(filePath: string) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const resortName = searchParams.get('resort');
+    const resort = searchParams.get('resort');
 
-    if (!resortName) {
-      return NextResponse.json(
-        { error: 'Resort name is required' },
-        { status: 400 }
-      );
+    if (!resort) {
+      return NextResponse.json({ error: 'Resort parameter is required' }, { status: 400 });
     }
 
-    const runsData = await readRunsData();
-    
-    // If no data, return empty collection
-    if (!runsData.features) {
-      return NextResponse.json({
-        type: 'FeatureCollection',
-        features: []
-      });
+    // Try first filename format
+    const filename1 = resort.toLowerCase().replace(/\s+/g, '_') + '_runs.json';
+    let filePath = path.join(process.cwd(), 'JSON', 'supported_runs', filename1);
+
+    // Check which file exists and use that path
+    if (!await fileExists(filePath)) {
+      // Try second filename format
+      const filename2 = resort.toLowerCase().replace(/\s+/g, '_') + '_resort_runs.json';
+      filePath = path.join(process.cwd(), 'JSON', 'supported_runs', filename2);
+      if (!await fileExists(filePath)) {
+        console.error(`No run data found for ${resort}. Tried:`, { filename1, filename2 });
+        return NextResponse.json({ error: 'Resort data not found' }, { status: 404 });
+      }
     }
 
-    const filteredRuns = runsData.features.filter((feature: any) => {
-      const skiAreas = feature.properties?.skiAreas || [];
-      const data = skiAreas.some((area: any) => 
-        area.properties?.name?.toLowerCase().includes(resortName.toLowerCase())
-      );
-      return data;
-    });
-
-    return NextResponse.json({
-      type: 'FeatureCollection',
-      features: filteredRuns
-    });
-
+    try {
+      const fileContents = await fs.readFile(filePath, 'utf8');
+      const data = JSON.parse(fileContents);
+      return NextResponse.json(data);
+    } catch (error) {
+      console.error(`Error reading runs for ${resort}:`, error);
+      return NextResponse.json({ error: 'Resort data not found' }, { status: 404 });
+    }
   } catch (error) {
-    console.error('Error processing runs data:', error);
-    // Return empty collection on error
-    return NextResponse.json({
-      type: 'FeatureCollection',
-      features: []
-    });
+    console.error('Error in GetRuns API:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 } 

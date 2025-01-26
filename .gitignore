@@ -34,3 +34,6 @@ public/uploads/*
 public/uploads/thumbnails/*
 !public/uploads/.gitkeep
 !public/uploads/thumbnails/.gitkeep
+
+JSON/runs.geojson
+JSON/runs

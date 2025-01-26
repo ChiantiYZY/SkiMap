@@ -82,15 +82,6 @@ const liftLabelStyle: LayerProps = {
   }
 };
 
-const runLayerStyle: LayerProps = {
-  id: 'runs',
-  type: 'line',
-  paint: {
-    'line-color': '#000000',
-    'line-width': 2
-  }
-};
-
 interface LiftFeatureCollection {
   type: 'FeatureCollection';
   features: any[];
@@ -127,6 +118,8 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
   const [photos, setPhotos] = useState<PhotoLocation[]>([]);
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoLocation | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [showRuns, setShowRuns] = useState(true);
+  const [hoveredRunId, setHoveredRunId] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -159,6 +152,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         const data = await response.json();
 
         if (data.features) {
+          console.log(data)
           setRunsData(data);
         }
       } catch (error) {
@@ -175,6 +169,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     const map = mapRef.current?.getMap();
     
     if (map) {
+      console.log(resortName)
       map.jumpTo(RESORT_COORDINATES[resortName]);
       setViewState(RESORT_COORDINATES[resortName]);
     }
@@ -194,12 +189,74 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     };
   }, [photos]);
 
+  const runsLayer: LayerProps = {
+    id: 'runs',
+    type: 'line',
+    paint: {
+      'line-color': [
+        'match',
+        ['get', 'colorName'],
+        'green', '#008000',
+        'blue', '#0000FF',
+        'black', '#000000',
+        '#CCCCCC'
+      ],
+      'line-width': [
+        'case',
+        ['==', ['get', 'id'], hoveredRunId], 4,  // Increase width when hovered
+        2  // Default width
+      ],
+      'line-opacity': [
+        'case',
+        ['==', ['get', 'id'], hoveredRunId], 1,  // Full opacity when hovered
+        0.8  // Slightly transparent by default
+      ]
+    }
+  };
+
+  const runLabelLayer: LayerProps = {
+    id: 'run-labels',
+    type: 'symbol',
+    layout: {
+      'text-field': ['get', 'name'],
+      'text-size': 12,
+      'text-offset': [0, 1],
+      'text-anchor': 'center',
+      'symbol-placement': 'line',
+      'text-justify': 'center',
+      'text-allow-overlap': false,
+      'text-ignore-placement': false,
+      'text-rotation-alignment': 'map',
+      'symbol-spacing': 250,  // Space between repeated labels
+      'text-max-angle': 30   // Max angle between characters
+    },
+    paint: {
+      'text-color': '#FFFFFF',
+      'text-halo-color': 'rgba(0, 0, 0, 0.75)',
+      'text-halo-width': 2
+    }
+  };
+
   return (
     <div className="relative w-full h-full">
       <Map
         ref={mapRef}
         {...viewState}
         onMove={evt => setViewState(evt.viewState)}
+        onMouseEnter="runs"
+        onMouseMove={(e) => {
+          if (e.features?.[0]) {
+            setHoveredRunId(e.features[0].properties.id);
+            e.target.getCanvas().style.cursor = 'pointer';
+          }
+        }}
+        onMouseLeave="runs"
+        onMouseOut={() => {
+          setHoveredRunId(null);
+          if (mapRef.current) {
+            mapRef.current.getCanvas().style.cursor = '';
+          }
+        }}
         style={{ width: '100%', height: '100%' }}
         mapStyle="mapbox://styles/mapbox/satellite-v9"
         mapboxAccessToken={MAPBOX_TOKEN}
@@ -216,9 +273,12 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           maxzoom={14}
         />
 
-        <Source id="runs" type="geojson" data={runsData}>
-          <Layer {...runLayerStyle} />
-        </Source>
+        {showRuns && (
+          <Source id="runs" type="geojson" data={runsData}>
+            <Layer {...runsLayer} />
+            <Layer {...runLabelLayer} />
+          </Source>
+        )}
 
         {/* Only render lift layers if showLifts is true */}
         {showLifts && (
@@ -290,6 +350,11 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           label="Show Lifts"
           checked={showLifts}
           onChange={setShowLifts}
+        />
+        <LayerToggle 
+          label="Show Runs"
+          checked={showRuns}
+          onChange={setShowRuns}
         />
       </div>
 
