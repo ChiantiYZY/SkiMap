@@ -120,6 +120,9 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [showRuns, setShowRuns] = useState(true);
   const [hoveredRunId, setHoveredRunId] = useState<string | null>(null);
+  const [isOrbiting, setIsOrbiting] = useState(false);
+  const animationRef = useRef<number | null>(null);
+  const [orbitSpeed, setOrbitSpeed] = useState(0.5);
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -188,6 +191,42 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       });
     };
   }, [photos]);
+
+  // Add animation effect
+  useEffect(() => {
+    if (!isOrbiting || !mapRef.current) return;
+
+    let bearing = viewState.bearing || 0;
+    const animate = () => {
+      if (!isOrbiting || !mapRef.current) return;
+      
+      bearing = (bearing + orbitSpeed) % 360;
+      const center = RESORT_COORDINATES[resortName];
+      
+      mapRef.current.getMap().easeTo({
+        bearing,
+        center: [center.longitude, center.latitude],
+        pitch: 60,
+        duration: 0
+      });
+
+      setViewState(prev => ({
+        ...prev,
+        bearing,
+        pitch: 60
+      }));
+      
+      animationRef.current = requestAnimationFrame(animate);
+    };
+    
+    animate();
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isOrbiting, resortName, orbitSpeed]);
 
   const runsLayer: LayerProps = {
     id: 'runs',
@@ -356,6 +395,27 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           checked={showRuns}
           onChange={setShowRuns}
         />
+        <div className="flex items-center gap-2">
+          <LayerToggle 
+            label="Orbit View"
+            checked={isOrbiting}
+            onChange={setIsOrbiting}
+          />
+          {isOrbiting && (
+            <div className="flex items-center gap-2 ml-2">
+              <input
+                type="range"
+                min="0.1"
+                max="2"
+                step="0.1"
+                value={orbitSpeed}
+                onChange={(e) => setOrbitSpeed(parseFloat(e.target.value))}
+                className="w-24 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              />
+              <span className="text-white text-xs">{orbitSpeed.toFixed(1)}x</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Loading overlay */}
