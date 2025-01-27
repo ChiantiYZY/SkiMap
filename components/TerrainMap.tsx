@@ -220,7 +220,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     };
   }, [photos]);
 
-  // Add animation effect
+  // Update the orbit animation effect
   useEffect(() => {
     if (!isOrbiting || !mapRef.current) return;
 
@@ -241,7 +241,10 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       setViewState(prev => ({
         ...prev,
         bearing,
-        pitch: 60
+        pitch: 60,
+        longitude: center.longitude,
+        latitude: center.latitude,
+        zoom: prev.zoom
       }));
       
       animationRef.current = requestAnimationFrame(animate);
@@ -454,10 +457,26 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
 
       {/* Compass */}
       <div 
-        className="absolute top-36 right-4 bg-black/30 p-2 rounded-full backdrop-blur-sm z-10"
+        className="absolute top-36 right-4 bg-black/30 p-2 rounded-full backdrop-blur-sm z-10 cursor-pointer"
         style={{ 
           transform: `rotate(${-viewState.bearing || 0}deg)`,
           transition: 'transform 0.3s ease-out'
+        }}
+        onClick={async () => {
+          const savedViewState = await fetchSavedViewState(resortName);
+          if (savedViewState && mapRef.current) {
+            console.log("saved view state", savedViewState);
+            
+            mapRef.current.getMap().easeTo({
+              center: [savedViewState.longitude, savedViewState.latitude],
+              zoom: savedViewState.zoom,
+              bearing: savedViewState.bearing || 0,
+              pitch: savedViewState.pitch || 0,
+              duration: 1000
+            });
+
+            // await new Promise(resolve => setTimeout(resolve, 1000));
+          }
         }}
       >
         <div className="relative w-8 h-8">
@@ -526,7 +545,8 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
               bearing: viewState.bearing || 0,
               zoom: viewState.zoom || 0,
               latitude: viewState.latitude,
-              longitude: viewState.longitude
+              longitude: viewState.longitude,
+              pitch: viewState.pitch || 0
             };
 
             try {
