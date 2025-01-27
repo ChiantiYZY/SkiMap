@@ -244,13 +244,13 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       'line-width': [
         'case',
         ['==', ['get', 'id'], hoveredRunId], 4,
-        ['==', ['get', 'id'], selectedRun?.id], 4,
+        ['==', ['get', 'id'], selectedRun ? selectedRun.id : ''], 4,
         2  // Default width
       ],
       'line-opacity': [
         'case',
         ['==', ['get', 'id'], hoveredRunId], 1,
-        ['==', ['get', 'id'], selectedRun?.id], 1,
+        ['==', ['get', 'id'], selectedRun ? selectedRun.id : ''], 1,
         0.8  // Default opacity
       ]
     }
@@ -288,7 +288,6 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         interactiveLayerIds={['runs']}
         onMouseEnter={(e) => {
           if (e.features?.[0]) {
-            console.log("--------------------hoverd run id", e.features[0].properties.id)
             setHoveredRunId(e.features[0].properties.id);
             e.target.getCanvas().style.cursor = 'pointer';
           }
@@ -458,9 +457,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
             <p><span className="font-medium">Difficulty:</span> {selectedRun.difficulty}</p>
             <p><span className="font-medium">Length:</span> {selectedRun.lengthInKm * 1000} m</p>
             <p><span className="font-medium">Vertical Drop:</span> {selectedRun.verticalDrop}m</p>
-            {selectedRun.grooming && (
-              <p><span className="font-medium">Grooming:</span> {selectedRun.grooming}</p>
-            )}
+            <p><span className="font-medium">Max Slope:</span> {selectedRun.maxSlope}°</p>
           </div>
         </div>
       )}

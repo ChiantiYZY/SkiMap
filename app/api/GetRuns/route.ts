@@ -52,6 +52,41 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
   return R * c;
 }
 
+// Add helper function to calculate vertical drop in meters
+function calculateVerticalDrop(coordinates: number[][]): number {
+  let maxElevation = -Infinity;
+  let minElevation = Infinity;
+  
+  coordinates.forEach(coord => {
+    const elevation = coord[2] || 0;  // Get elevation from z-coordinate
+    maxElevation = Math.max(maxElevation, elevation);
+    minElevation = Math.min(minElevation, elevation);
+  });
+  console.log("Max elevation ", maxElevation, " min elevation ", minElevation, " drop ", Math.round(maxElevation - minElevation))
+  return Math.round(maxElevation - minElevation);
+}
+
+// Add helper function to calculate max slope angle in degrees
+function calculateMaxSlope(coordinates: number[][]): number {
+  let maxSlope = 0;
+  
+  for (let i = 0; i < coordinates.length - 1; i++) {
+    const [lon1, lat1, elev1] = coordinates[i];
+    const [lon2, lat2, elev2] = coordinates[i + 1];
+    
+    // Calculate horizontal distance in meters
+    const horizontalDist = calculateDistance(lat1, lon1, lat2, lon2) * 1000;
+    // Calculate vertical distance in meters
+    const verticalDist = Math.abs(elev2 - elev1);
+    
+    // Calculate slope angle in degrees
+    const slopeAngle = Math.atan(verticalDist / horizontalDist) * (180 / Math.PI);
+    maxSlope = Math.max(maxSlope, slopeAngle);
+  }
+  
+  return Math.round(maxSlope);
+}
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
@@ -80,18 +115,19 @@ export async function GET(request: NextRequest) {
       const fileContents = await fs.readFile(filePath, 'utf8');
       const data = JSON.parse(fileContents);
       
-      // Add lengthInKm to each feature's properties
-      const featuresWithLength = data.features.map((feature: any) => ({
+      const featuresWithCalculations = data.features.map((feature: any) => ({
         ...feature,
         properties: {
           ...feature.properties,
-          lengthInKm: calculateLengthInKm(feature.geometry.coordinates)
+          lengthInKm: calculateLengthInKm(feature.geometry.coordinates),
+          verticalDrop: calculateVerticalDrop(feature.geometry.coordinates),
+          maxSlope: calculateMaxSlope(feature.geometry.coordinates)
         }
       }));
 
       return NextResponse.json({
         ...data,
-        features: featuresWithLength
+        features: featuresWithCalculations
       });
     } catch (error) {
       console.error(`Error reading runs for ${resort}:`, error);
