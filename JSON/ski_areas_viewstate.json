@@ -4,5 +4,35 @@
     "zoom": 14.47900548898659,
     "latitude": 39.190119370335196,
     "longitude": -120.23594341786139
+  },
+  "Northstar at Tahoe": {
+    "bearing": -144.4470632388826,
+    "zoom": 14.479005488986585,
+    "latitude": 39.26237160035595,
+    "longitude": -120.1317292110034
+  },
+  "Palisades Tahoe Alpine Meadows": {
+    "bearing": 164.72925170067992,
+    "zoom": 14.496563684834056,
+    "latitude": 39.156601191978694,
+    "longitude": -120.23432510746743
+  },
+  "Heavenly Mountain": {
+    "bearing": 167.97181476575906,
+    "zoom": 13.721944548645812,
+    "latitude": 38.933434357417866,
+    "longitude": -119.91069168833278
+  },
+  "Kirkwood Mountain": {
+    "bearing": -136.8000000000004,
+    "zoom": 14.0774435123246,
+    "latitude": 38.67140921432352,
+    "longitude": -120.06980728320183
+  },
+  "Mammoth Mountain": {
+    "bearing": -116.54173998432708,
+    "zoom": 14.345151496765908,
+    "latitude": 37.637839135677766,
+    "longitude": -119.01795202725339
   }
 }

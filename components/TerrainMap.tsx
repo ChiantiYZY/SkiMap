@@ -101,6 +101,19 @@ interface PhotoLocation {
   file: File;
 }
 
+async function fetchSavedViewState(resortName: string) {
+  try {
+    const response = await fetch(`/api/GetViewState?resort=${encodeURIComponent(resortName)}`);
+    if (response.ok) {
+      const data = await response.json();
+      return data.viewState;
+    }
+  } catch (error) {
+    console.error('Error fetching viewstate:', error);
+  }
+  return null;
+}
+
 export default function TerrainMap({ resortName }: TerrainMapProps) {
   const mapRef = useRef<MapRef>(null);
   const [viewState, setViewState] = useState<Partial<ViewState>>(RESORT_COORDINATES[resortName]);
@@ -170,18 +183,31 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
 
   // Update view when resort changes
   useEffect(() => {
-    setIsTransitioning(true);
-    const map = mapRef.current?.getMap();
-    
-    if (map) {
-      console.log(resortName)
-      map.jumpTo(RESORT_COORDINATES[resortName]);
-      setViewState(RESORT_COORDINATES[resortName]);
-    }
+    const loadResort = async () => {
+      setIsTransitioning(true);
+      const map = mapRef.current?.getMap();
+      
+      if (map) {
+        // Try to get saved viewstate first
+        const savedViewState = await fetchSavedViewState(resortName);
+        
+        if (savedViewState) {
+          console.log('Using saved viewstate for', resortName);
+          map.jumpTo(savedViewState);
+          setViewState(savedViewState);
+        } else {
+          console.log('Using default viewstate for', resortName);
+          map.jumpTo(RESORT_COORDINATES[resortName]);
+          setViewState(RESORT_COORDINATES[resortName]);
+        }
+      }
 
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 1000);
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000);
+    };
+
+    loadResort();
   }, [resortName]);
 
   // Clean up object URLs when photos change
@@ -502,9 +528,6 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
               latitude: viewState.latitude,
               longitude: viewState.longitude
             };
-            
-            console.log("save spot button clicked");
-            console.log("Current view state:", currentViewState);
 
             try {
               const response = await fetch('/api/SaveViewState', {
