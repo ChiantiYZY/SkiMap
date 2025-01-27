@@ -492,10 +492,41 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         </div>
       )}
 
-      {/* Replace the existing Save Spot button div with this */}
+      {/* Save Spot button */}
       <div className="absolute bottom-4 right-4 z-10">
         <button
-          onClick={() => console.log("save spot button clicked")}
+          onClick={async () => {
+            const currentViewState = {
+              bearing: viewState.bearing || 0,
+              zoom: viewState.zoom || 0,
+              latitude: viewState.latitude,
+              longitude: viewState.longitude
+            };
+            
+            console.log("save spot button clicked");
+            console.log("Current view state:", currentViewState);
+
+            try {
+              const response = await fetch('/api/SaveViewState', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  resortName,
+                  viewState: currentViewState
+                })
+              });
+
+              if (response.ok) {
+                console.log('ViewState saved successfully');
+              } else {
+                console.error('Failed to save viewState');
+              }
+            } catch (error) {
+              console.error('Error saving viewState:', error);
+            }
+          }}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm transition-colors"
         >
           Save Spot
