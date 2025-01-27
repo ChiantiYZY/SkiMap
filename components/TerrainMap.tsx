@@ -123,6 +123,7 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
   const [isOrbiting, setIsOrbiting] = useState(false);
   const animationRef = useRef<number | null>(null);
   const [orbitSpeed, setOrbitSpeed] = useState(0.5);
+  const [selectedRun, setSelectedRun] = useState<any>(null);
 
   useEffect(() => {
     const fetchLifts = async () => {
@@ -242,13 +243,15 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       ],
       'line-width': [
         'case',
-        ['==', ['get', 'id'], hoveredRunId], 4,  // Increase width when hovered
+        ['==', ['get', 'id'], hoveredRunId], 4,
+        ['==', ['get', 'id'], selectedRun?.id], 4,
         2  // Default width
       ],
       'line-opacity': [
         'case',
-        ['==', ['get', 'id'], hoveredRunId], 1,  // Full opacity when hovered
-        0.8  // Slightly transparent by default
+        ['==', ['get', 'id'], hoveredRunId], 1,
+        ['==', ['get', 'id'], selectedRun?.id], 1,
+        0.8  // Default opacity
       ]
     }
   };
@@ -282,15 +285,15 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         ref={mapRef}
         {...viewState}
         onMove={evt => setViewState(evt.viewState)}
-        onMouseEnter="runs"
-        onMouseMove={(e) => {
+        interactiveLayerIds={['runs']}
+        onMouseEnter={(e) => {
           if (e.features?.[0]) {
+            console.log("--------------------hoverd run id", e.features[0].properties.id)
             setHoveredRunId(e.features[0].properties.id);
             e.target.getCanvas().style.cursor = 'pointer';
           }
         }}
-        onMouseLeave="runs"
-        onMouseOut={() => {
+        onMouseLeave={() => {
           setHoveredRunId(null);
           if (mapRef.current) {
             mapRef.current.getCanvas().style.cursor = '';
@@ -303,6 +306,11 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         minZoom={13}
         maxZoom={20}
         onLoad={() => setIsMapLoaded(true)}
+        onClick={(e) => {
+          if (e.features?.[0]) {
+            setSelectedRun(e.features[0].properties);
+          }
+        }}
       >
         <Source
           id="mapbox-dem"
@@ -433,6 +441,29 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
       )}
 
       <PhotoUpload onPhotoAdd={(photo) => setPhotos(prev => [...prev, photo])} />
+
+      {/* Add run info panel */}
+      {selectedRun && (
+        <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg w-80">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="font-bold text-lg">{selectedRun.name}</h3>
+            <button 
+              onClick={() => setSelectedRun(null)}
+              className="text-gray-500 hover:text-gray-700"
+            >
+              ×
+            </button>
+          </div>
+          <div className="space-y-2">
+            <p><span className="font-medium">Difficulty:</span> {selectedRun.difficulty}</p>
+            <p><span className="font-medium">Length:</span> {selectedRun.lengthInKm * 1000} m</p>
+            <p><span className="font-medium">Vertical Drop:</span> {selectedRun.verticalDrop}m</p>
+            {selectedRun.grooming && (
+              <p><span className="font-medium">Grooming:</span> {selectedRun.grooming}</p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
