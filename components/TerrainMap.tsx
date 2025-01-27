@@ -8,6 +8,7 @@ import LayerToggle from './LayerToggle';
 import Image from 'next/image';
 import PhotoUpload from './PhotoUpload';
 import ImagePreview from './ImagePreview';
+import { Compass } from 'lucide-react';
 
 // Aerial Tram lift data
 const aerialTramData = {
@@ -425,6 +426,35 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
         </div>
       </div>
 
+      {/* Compass */}
+      <div 
+        className="absolute top-36 right-4 bg-black/30 p-2 rounded-full backdrop-blur-sm z-10"
+        style={{ 
+          transform: `rotate(${-viewState.bearing || 0}deg)`,
+          transition: 'transform 0.3s ease-out'
+        }}
+      >
+        <div className="relative w-8 h-8">
+          {/* Outer circle */}
+          <div className="absolute inset-0 border-2 border-gray-300 rounded-full" />
+          
+          {/* North pointer */}
+          <div className="absolute w-4 h-4 left-[55%] top-1/2 -translate-x-1/2 -translate-y-full">
+            <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[16px] border-b-blue-600" />
+          </div>
+          
+          {/* South pointer */}
+          <div className="absolute w-4 h-4 left-[57%] top-1/2 -translate-x-1/2">
+            <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[16px] border-t-red-600" />
+          </div>
+          
+          {/* N label */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-gray-300 text-xs font-medium">
+            N
+          </div>
+        </div>
+      </div>
+
       {/* Loading overlay */}
       {(!isMapLoaded || isTransitioning) && (
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -461,6 +491,16 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           </div>
         </div>
       )}
+
+      {/* Replace the existing Save Spot button div with this */}
+      <div className="absolute bottom-4 right-4 z-10">
+        <button
+          onClick={() => console.log("save spot button clicked")}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm transition-colors"
+        >
+          Save Spot
+        </button>
+      </div>
     </div>
   );
 }
