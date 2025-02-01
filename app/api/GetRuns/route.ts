@@ -62,7 +62,6 @@ function calculateVerticalDrop(coordinates: number[][]): number {
     maxElevation = Math.max(maxElevation, elevation);
     minElevation = Math.min(minElevation, elevation);
   });
-  console.log("Max elevation ", maxElevation, " min elevation ", minElevation, " drop ", Math.round(maxElevation - minElevation))
   return Math.round(maxElevation - minElevation);
 }
 

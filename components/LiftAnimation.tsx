@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Source, Layer, LayerProps } from 'react-map-gl';
+import { GPXPoint } from '../utils/gpxParser';
 
 interface LiftAnimationProps {
-  lift: any;  // The lift feature to animate along
+  lift?: any;
+  gpxPoints?: GPXPoint[];
 }
 
 const dotLayerStyle: LayerProps = {
@@ -35,14 +37,14 @@ function getPointAlongLine(coordinates: number[][], percentage: number) {
   ];
 }
 
-export default function LiftAnimation({ lift }: LiftAnimationProps) {
+export default function LiftAnimation({ lift, gpxPoints }: LiftAnimationProps) {
   const [dotPosition, setDotPosition] = useState<any>({
     type: 'FeatureCollection',
     features: [{
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: lift?.geometry.coordinates[0] || [0, 0]
+        coordinates: [0, 0]
       }
     }]
   });
@@ -51,14 +53,43 @@ export default function LiftAnimation({ lift }: LiftAnimationProps) {
   const startTime = useRef<number>();
 
   useEffect(() => {
-    if (!lift) return;
+    // Reset animation when gpxPoints changes
+    startTime.current = undefined;
+    
+    // Clear previous animation
+    if (animationFrame.current) {
+      cancelAnimationFrame(animationFrame.current);
+    }
+
+    if (!gpxPoints?.length && !lift) return;
+
+    console.log("Starting animation with points:", gpxPoints?.length || 'using lift');
+    
+    const coordinates = gpxPoints?.length ? 
+      gpxPoints.map(p => [p.longitude, p.latitude]) :
+      lift?.geometry.coordinates;
+
+    console.log("Coordinates", coordinates);
+
+    if (!coordinates?.length) return;
+
+    // Set initial position
+    setDotPosition({
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: coordinates[0]
+        }
+      }]
+    });
 
     const animate = (timestamp: number) => {
       if (!startTime.current) startTime.current = timestamp;
-      const progress = (timestamp - startTime.current) % 6000; // 6-second loop
-      const percentage = (progress / 6000);
+      const progress = (timestamp - startTime.current) % 6000;
+      const percentage = progress / 6000;
 
-      const coordinates = lift.geometry.coordinates;
       const position = getPointAlongLine(coordinates, percentage);
 
       setDotPosition({
@@ -82,9 +113,7 @@ export default function LiftAnimation({ lift }: LiftAnimationProps) {
         cancelAnimationFrame(animationFrame.current);
       }
     };
-  }, [lift]);
-
-  if (!lift) return null;
+  }, [gpxPoints, lift]); // Dependency on gpxPoints and lift
 
   return (
     <Source id="dot" type="geojson" data={dotPosition}>

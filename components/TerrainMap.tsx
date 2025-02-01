@@ -11,6 +11,7 @@ import ImagePreview from './ImagePreview';
 import { Compass } from 'lucide-react';
 import VideoUpload from './VideoUpload';
 import GPSUpload from './GPSUpload';
+import { GPXPoint } from '@/utils/gpxParser';
 
 // Aerial Tram lift data
 const aerialTramData = {
@@ -94,6 +95,7 @@ interface TerrainMapProps {
   resortName: ResortName;
   photos: PhotoLocation[];
   gpsFiles: GPSLocation[];
+  gpxPoints?: GPXPoint[];
 }
 
 interface PhotoLocation {
@@ -126,7 +128,12 @@ async function fetchSavedViewState(resortName: string) {
   return null;
 }
 
-export default function TerrainMap({ resortName, photos, gpsFiles }: TerrainMapProps) {
+export default function TerrainMap({ 
+  resortName, 
+  photos, 
+  gpsFiles,
+  gpxPoints 
+}: TerrainMapProps) {
   const mapRef = useRef<MapRef>(null);
   const [viewState, setViewState] = useState<Partial<ViewState>>(RESORT_COORDINATES[resortName]);
   const [liftsData, setLiftsData] = useState<LiftFeatureCollection>({
@@ -376,7 +383,7 @@ export default function TerrainMap({ resortName, photos, gpsFiles }: TerrainMapP
         )}
 
         {/* Animated dot */}
-        <LiftAnimation lift={tramFeature} />
+        <LiftAnimation lift={tramFeature} gpxPoints={gpxPoints} />
 
         {photos.map((photo, index) => (
           <Marker
