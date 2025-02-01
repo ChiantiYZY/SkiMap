@@ -37,3 +37,7 @@ public/uploads/thumbnails/*
 
 JSON/runs.geojson
 JSON/runs
+
+# macOS system files
+.DS_Store
+*/.DS_Store

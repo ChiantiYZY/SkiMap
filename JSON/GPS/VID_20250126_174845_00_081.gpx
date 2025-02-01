@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="Insta360 Studio">
+  <metadata>
+    <link href="https://www.insta360.com">
+      <text>Insta360 GPS Dashboard</text>
+    </link>
+    <time>2025-01-27T01:52:14Z</time>
+    <bounds maxlat="37.362329503395536" minlat="37.362328865964265" maxlon="121.95012305444176" minlon="121.95012232975039"/>
+  </metadata>
+  <trk>
+    <name>Insta360 GPS Data</name>
+    <trkseg>
+      <trkpt lat="37.362329503294404" lon="-121.95012232975039">
+        <ele>16.7263</ele>
+        <time>2025-01-27T01:48:43Z</time>
+      </trkpt>
+      <trkpt lat="37.362329503298156" lon="-121.95012232976596">
+        <ele>16.7263</ele>
+        <time>2025-01-27T01:48:44Z</time>
+      </trkpt>
+      <trkpt lat="37.362329503395536" lon="-121.95012233003149">
+        <ele>16.7265</ele>
+        <time>2025-01-27T01:48:45Z</time>
+      </trkpt>
+      <trkpt lat="37.36232949637985" lon="-121.95012233844569">
+        <ele>16.7267</ele>
+        <time>2025-01-27T01:48:46Z</time>
+      </trkpt>
+      <trkpt lat="37.362329473376775" lon="-121.95012236392246">
+        <ele>16.7273</ele>
+        <time>2025-01-27T01:48:47Z</time>
+      </trkpt>
+      <trkpt lat="37.362329423414678" lon="-121.950122421138">
+        <ele>16.728</ele>
+        <time>2025-01-27T01:48:48Z</time>
+      </trkpt>
+      <trkpt lat="37.362329337201906" lon="-121.95012251691045">
+        <ele>16.73</ele>
+        <time>2025-01-27T01:48:49Z</time>
+      </trkpt>
+      <trkpt lat="37.362329213218928" lon="-121.95012265827792">
+        <ele>16.7375</ele>
+        <time>2025-01-27T01:48:50Z</time>
+      </trkpt>
+      <trkpt lat="37.362329052231715" lon="-121.95012284691187">
+        <ele>16.7496</ele>
+        <time>2025-01-27T01:48:51Z</time>
+      </trkpt>
+      <trkpt lat="37.362328865964265" lon="-121.95012305444176">
+        <ele>16.75</ele>
+        <time>2025-01-27T01:48:52Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
