@@ -1,34 +1,38 @@
 "use client"
 
-import dynamic from "next/dynamic"
-import { Suspense, useState } from "react"
-import ResortList from "@/components/ResortList"
-import { ResortName } from '@/app/json/resortCoordinates'
-
-const TerrainMap = dynamic(() => import("@/components/TerrainMap"), {
-  ssr: false,
-  loading: () => <div>Loading map...</div>
-})
+import TerrainMap from '@/components/TerrainMap';
+import ResortList from '@/components/ResortList';
+import { useState } from 'react';
+import { ResortName } from './json/resortCoordinates';
+import PhotoUpload from '@/components/PhotoUpload';
+import GPSUpload from '@/components/GPSUpload';
+import { PhotoLocation, GPSLocation } from '@/types';
 
 export default function Home() {
   const [selectedResort, setSelectedResort] = useState<ResortName>('Palisades Tahoe Olympic Valley');
+  const [photos, setPhotos] = useState<PhotoLocation[]>([]);
+  const [gpsFiles, setGPSFiles] = useState<GPSLocation[]>([]);
 
   return (
-    <main className="flex flex-col h-screen">
-
-      <ResortList 
-        onResortChange={setSelectedResort}
-        selectedResort={selectedResort}
-      />
-      <div className="flex-1 relative">
-        <div className="absolute top-4 right-4 bg-black/30 text-white px-4 py-2 rounded-lg backdrop-blur-sm z-10">
-          {selectedResort}
+    <main className="flex h-screen">
+      <div className="w-2/3 h-full relative">
+        <ResortList 
+          onResortChange={setSelectedResort}
+          selectedResort={selectedResort}
+        />
+        <TerrainMap 
+          resortName={selectedResort}
+          photos={photos}
+          gpsFiles={gpsFiles}
+        />
+      </div>
+      <div className="w-1/3 h-full bg-gray-50 p-4 relative">
+        <div className="absolute bottom-4 left-4 space-x-2.5">
+          <PhotoUpload onPhotoAdd={(photo) => setPhotos(prev => [...prev, photo])} />
+          <GPSUpload onGPSAdd={(gps) => setGPSFiles(prev => [...prev, gps])} />
         </div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <TerrainMap resortName={selectedResort} />
-        </Suspense>
       </div>
     </main>
-  )
+  );
 }
 

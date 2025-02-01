@@ -9,6 +9,8 @@ import Image from 'next/image';
 import PhotoUpload from './PhotoUpload';
 import ImagePreview from './ImagePreview';
 import { Compass } from 'lucide-react';
+import VideoUpload from './VideoUpload';
+import GPSUpload from './GPSUpload';
 
 // Aerial Tram lift data
 const aerialTramData = {
@@ -90,6 +92,8 @@ interface LiftFeatureCollection {
 
 interface TerrainMapProps {
   resortName: ResortName;
+  photos: PhotoLocation[];
+  gpsFiles: GPSLocation[];
 }
 
 interface PhotoLocation {
@@ -97,6 +101,14 @@ interface PhotoLocation {
   longitude: number;
   timestamp?: string;
   thumbnail: string;
+  url: string;
+  file: File;
+}
+
+interface GPSLocation {
+  latitude: number;
+  longitude: number;
+  timestamp?: string;
   url: string;
   file: File;
 }
@@ -114,7 +126,7 @@ async function fetchSavedViewState(resortName: string) {
   return null;
 }
 
-export default function TerrainMap({ resortName }: TerrainMapProps) {
+export default function TerrainMap({ resortName, photos, gpsFiles }: TerrainMapProps) {
   const mapRef = useRef<MapRef>(null);
   const [viewState, setViewState] = useState<Partial<ViewState>>(RESORT_COORDINATES[resortName]);
   const [liftsData, setLiftsData] = useState<LiftFeatureCollection>({
@@ -129,7 +141,6 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
     type: 'FeatureCollection',
     features: []
   });
-  const [photos, setPhotos] = useState<PhotoLocation[]>([]);
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoLocation | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [showRuns, setShowRuns] = useState(true);
@@ -513,8 +524,6 @@ export default function TerrainMap({ resortName }: TerrainMapProps) {
           onClose={() => setPreviewImage(null)}
         />
       )}
-
-      <PhotoUpload onPhotoAdd={(photo) => setPhotos(prev => [...prev, photo])} />
 
       {/* Add run info panel */}
       {selectedRun && (

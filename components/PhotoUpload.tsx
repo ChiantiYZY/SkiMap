@@ -122,11 +122,9 @@ export default function PhotoUpload({ onPhotoAdd }: PhotoUploadProps) {
   };
 
   return (
-    <div className="absolute bottom-4 left-4 z-10">
+    <div className="inline-block">
       <div
-        className={`p-4 bg-white rounded-lg shadow-lg ${
-          isDragging ? 'bg-blue-50' : ''
-        }`}
+        className={`bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg shadow-lg backdrop-blur-sm transition-colors whitespace-nowrap cursor-pointer`}
         onDragOver={(e) => {
           e.preventDefault();
           setIsDragging(true);
@@ -151,9 +149,9 @@ export default function PhotoUpload({ onPhotoAdd }: PhotoUploadProps) {
         />
         <label
           htmlFor="photo-upload"
-          className="cursor-pointer text-blue-600 hover:text-blue-800"
+          className="text-white text-sm cursor-pointer"
         >
-          {isConverting ? 'Converting HEIC...' : 'Upload Photo'}
+          Upload Photo
         </label>
       </div>
     </div>
