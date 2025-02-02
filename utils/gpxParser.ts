@@ -1,7 +1,7 @@
 export interface GPXPoint {
   latitude: number;
   longitude: number;
-  elevation?: number;
+  elevation: number;
   time?: string;
 }
 
@@ -16,13 +16,13 @@ export function parseGPX(gpxContent: string): GPXPoint[] {
     const trkpt = trkpts[i];
     const lat = parseFloat(trkpt.getAttribute("lat") || "0");
     const lon = parseFloat(trkpt.getAttribute("lon") || "0");
-    const ele = trkpt.getElementsByTagName("ele")[0]?.textContent;
+    const ele = trkpt.getElementsByTagName("ele")[0]?.textContent || "0";
     const time = trkpt.getElementsByTagName("time")[0]?.textContent;
     
     points.push({
       latitude: lat,
       longitude: lon,
-      elevation: ele ? parseFloat(ele) : undefined,
+      elevation: parseFloat(ele),
       time: time
     });
   }

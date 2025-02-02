@@ -2,7 +2,7 @@
 
 import TerrainMap from '@/components/TerrainMap';
 import ResortList from '@/components/ResortList';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ResortName } from './json/resortCoordinates';
 import PhotoUpload from '@/components/PhotoUpload';
 import GPSUpload from '@/components/GPSUpload';
@@ -18,7 +18,6 @@ export default function Home() {
   const [gpxPoints, setGPXPoints] = useState<GPXPoint[]>([]);
 
   const handleGPXSelect = async (index: number) => {
-
     setSelectedGPXIndex(index);
     const file = gpsFiles[index].file;
     const content = await file.text();
@@ -27,6 +26,58 @@ export default function Home() {
 
     console.log("Selected GPX file", file.name);
   };
+
+  useEffect(() => {
+    const loadStoredGPXFiles = async () => {
+      try {
+        const response = await fetch('/api/gpx');
+        if (!response.ok) throw new Error('Failed to fetch GPX files');
+        
+        const { files } = await response.json();
+        
+        // Clear existing files before loading
+        setGPSFiles([]);
+        
+        // Load each file
+        for (const fileName of files) {
+          const fileResponse = await fetch(`/api/gpx?file=${encodeURIComponent(fileName)}`);
+          const blob = await fileResponse.blob();
+          const file = new File([blob], fileName, { type: 'application/gpx+xml' });
+          
+          // Create GPSLocation object
+          const text = await file.text();
+          const parser = new DOMParser();
+          const gpxDoc = parser.parseFromString(text, "text/xml");
+          const trkpts = gpxDoc.getElementsByTagName("trkpt");
+          
+          if (trkpts.length > 0) {
+            const firstPoint = trkpts[0];
+            const lat = parseFloat(firstPoint.getAttribute("lat") || "0");
+            const lon = parseFloat(firstPoint.getAttribute("lon") || "0");
+            const time = firstPoint.getElementsByTagName("time")[0]?.textContent;
+
+            setGPSFiles(prev => {
+              // Check if file already exists in state
+              if (prev.some(f => f.file.name === fileName)) {
+                return prev;
+              }
+              return [...prev, {
+                latitude: lat,
+                longitude: lon,
+                timestamp: time,
+                url: URL.createObjectURL(file),
+                file: file
+              }];
+            });
+          }
+        }
+      } catch (error) {
+        console.error('Error loading stored GPX files:', error);
+      }
+    };
+
+    loadStoredGPXFiles();
+  }, []);
 
   return (
     <main className="flex h-screen">

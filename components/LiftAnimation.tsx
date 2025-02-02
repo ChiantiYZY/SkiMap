@@ -33,7 +33,8 @@ function getPointAlongLine(coordinates: number[][], percentage: number) {
 
   return [
     start[0] + (end[0] - start[0]) * segmentPercentage,
-    start[1] + (end[1] - start[1]) * segmentPercentage
+    start[1] + (end[1] - start[1]) * segmentPercentage,
+    start[2] + (end[2] - start[2]) * segmentPercentage
   ];
 }
 
@@ -66,10 +67,10 @@ export default function LiftAnimation({ lift, gpxPoints }: LiftAnimationProps) {
     console.log("Starting animation with points:", gpxPoints?.length || 'using lift');
     
     const coordinates = gpxPoints?.length ? 
-      gpxPoints.map(p => [p.longitude, p.latitude]) :
+      gpxPoints.map(p => [p.longitude, p.latitude, p.elevation]) :
       lift?.geometry.coordinates;
 
-    console.log("Coordinates", coordinates);
+    console.log("Coordinates with elevation:", coordinates);
 
     if (!coordinates?.length) return;
 

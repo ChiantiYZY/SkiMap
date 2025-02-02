@@ -21,6 +21,20 @@ export default function GPSUpload({ onGPSAdd }: GPSUploadProps) {
     if (!file || !file.name.endsWith('.gpx')) return;
 
     try {
+      // Save file to server
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const saveResponse = await fetch('/api/gpx', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!saveResponse.ok) {
+        throw new Error('Failed to save GPX file');
+      }
+
+      // Process file for display
       const text = await file.text();
       const parser = new DOMParser();
       const gpxDoc = parser.parseFromString(text, "text/xml");
